@@ -15,8 +15,9 @@ void render_main(SDL_Renderer* renderer, SDL_Rect* hero, Room* room) {
         render_hero(renderer, hero);
     }
 
+
+
     // Другие элементы рендеринга могут быть добавлены здесь
 
-    // Обновление экрана
     SDL_RenderPresent(renderer);
 }
