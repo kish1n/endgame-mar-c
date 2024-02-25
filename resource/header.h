@@ -22,6 +22,7 @@ typedef struct {
     SDL_Rect bottomWall;
     SDL_Rect leftWall;
     SDL_Rect rightWall;
+    SDL_Texture* bg;
 } Room;
 
 //errs
@@ -30,16 +31,15 @@ SDL_Window* sdl_window();
 SDL_Renderer* sdl_render(SDL_Window* window);
 
 //entities
-Room room_build(int roomWidth, int roomHeight);
-void draw_hero(SDL_Renderer* renderer, SDL_Rect* hero);
+Room room_build(int roomWidth, int roomHeight, SDL_Texture* bgPath);
 
 //mechanics
-void update_hero(SDL_Rect* hero, double speed, Room* room, bool* running);
+void update_hero(SDL_Rect* hero, int speed, Room* room, bool* running);
 bool check_collision(const SDL_Rect* a, const SDL_Rect* b);
 
 //render
 Room render_room(SDL_Renderer* renderer, const Room* room);
-void render_hero(SDL_Renderer* renderer, SDL_Rect* hero);
+void render_hero(SDL_Renderer* renderer, SDL_Rect* hero, SDL_Texture* texture);
 void render_main(SDL_Renderer* renderer, SDL_Rect* hero, Room* room);
 
 //graphics

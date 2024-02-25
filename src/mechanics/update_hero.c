@@ -1,6 +1,6 @@
 #include "../../resource/header.h"
 
-void update_hero(SDL_Rect* hero, double speed, Room* room, bool* running) {
+void update_hero(SDL_Rect* hero, int speed, Room* room, bool* running) {
     SDL_Event event;
     while (SDL_PollEvent(&event)) {
         if (event.type == SDL_QUIT) {
