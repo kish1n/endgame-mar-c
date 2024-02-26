@@ -17,9 +17,5 @@ void render_main(SDL_Renderer* renderer, SDL_Rect* hero, Board* room, Object* ob
         render_hero(renderer, hero, mainHeroTexture);
     }
 
-
-
-    // Другие элементы рендеринга могут быть добавлены здесь
-
     SDL_RenderPresent(renderer);
 }

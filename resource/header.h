@@ -26,6 +26,9 @@ typedef struct board {
 typedef struct object {
     SDL_Texture* bg;
     SDL_Rect position;
+    int height; // высота фото
+    int width;  // ширина фото
+    bool dummy;
 } Object;
 
 //errs
@@ -34,13 +37,14 @@ SDL_Window* sdl_window();
 SDL_Renderer* sdl_render(SDL_Window* window);
 
 //entities
-Board board_build(int roomWidth, int roomHeight, SDL_Texture* bgPath);
-Object* init_first_room(SDL_Renderer* renderer);
+Board room_build(int roomWidth, int roomHeight, SDL_Texture* bgPath);
+Board board_build(Object obj);
+Object* init_room(SDL_Renderer* renderer, char** filenames, SDL_Rect* positions, bool** dummies);
 void render_all_room(SDL_Renderer* renderer, const Board* room, Object* objects, int len_objs);
 void render_obj(SDL_Renderer* renderer, Object obj);
 
 //mechanics
-void update_hero(SDL_Rect* hero, int speed, Board* board, bool* running);
+void update_hero(SDL_Rect* hero, int speed, Board* room, bool* running, Object* objects, int len_objs);
 bool check_collision(const SDL_Rect* a, const SDL_Rect* b);
 
 //render

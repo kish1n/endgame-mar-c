@@ -11,7 +11,7 @@ link_directories(resource/SDL2_image-2.8.2/lib/x64)
 
 add_executable(endgame
         resource/header.h
-        src/entities/board_build.c
+        src/entities/room_build.c
         src/errs/sdl_init.c
         src/errs/sdl_window.c
         src/errs/sdl_render.c
@@ -19,14 +19,15 @@ add_executable(endgame
         src/mechanics/update_hero.c
         src/mechanics/check_collision.c
         src/render/render_hero.c
-        src/render/render_room.c
+        src/render/render_board.c
         src/render/render_main.c
         src/render/reder_bg.c
         src/main.c
-        src/entities/init_first_room.c
-        src/render/render_room.c
+        src/entities/init_room.c
+        src/render/render_board.c
         src/render/render_all_room.c
-        src/render/render_obj.c)
+        src/render/render_obj.c
+        src/entities/board_build.c)
 
 
 target_link_libraries(endgame SDL2)
