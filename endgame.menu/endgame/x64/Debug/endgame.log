@@ -1,4 +1,0 @@
-﻿  main.c
-C:\Users\ppono\source\repos\endgame\endgame\main.c(350,32): warning C4047: функция: "SDL_Texture *" отличается по уровням косвенного обращения от "SDL_Texture *[4]"
-C:\Users\ppono\source\repos\endgame\endgame\main.c(350,32): warning C4024: SDL_DestroyTexture: различные типы для формального и фактического параметров 1
-  endgame.vcxproj -> C:\Users\ppono\source\repos\endgame\x64\Debug\endgame.exe
