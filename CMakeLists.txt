@@ -22,7 +22,11 @@ add_executable(endgame
         src/render/render_room.c
         src/render/render_main.c
         src/render/reder_bg.c
-        src/main.c)
+        src/main.c
+        src/entities/init_first_room.c
+        src/render/render_room.c
+        src/render/render_all_room.c
+        src/render/render_obj.c)
 
 
 target_link_libraries(endgame SDL2)

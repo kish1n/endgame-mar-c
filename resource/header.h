@@ -6,8 +6,6 @@
 #define SCREEN_WIDTH 1920
 #define SCREEN_HEIGHT 1080
 
-
-
 typedef struct coordinates {
     int x;
     int y;
@@ -25,6 +23,11 @@ typedef struct {
     SDL_Texture* bg;
 } Room;
 
+typedef struct {
+    SDL_Texture* bg;
+    SDL_Rect position;
+} object;
+
 //errs
 void sdl_init();
 SDL_Window* sdl_window();
@@ -32,6 +35,9 @@ SDL_Renderer* sdl_render(SDL_Window* window);
 
 //entities
 Room room_build(int roomWidth, int roomHeight, SDL_Texture* bgPath);
+object* init_first_room(SDL_Renderer* renderer);
+void render_all_room(SDL_Renderer* renderer, const Room* room, object* objects, int len_objs);
+void render_obj(SDL_Renderer* renderer, object obj);
 
 //mechanics
 void update_hero(SDL_Rect* hero, int speed, Room* room, bool* running);
@@ -40,7 +46,7 @@ bool check_collision(const SDL_Rect* a, const SDL_Rect* b);
 //render
 Room render_room(SDL_Renderer* renderer, const Room* room);
 void render_hero(SDL_Renderer* renderer, SDL_Rect* hero, SDL_Texture* texture);
-void render_main(SDL_Renderer* renderer, SDL_Rect* hero, Room* room);
+void render_main(SDL_Renderer* renderer, SDL_Rect* hero, Room* room, object* objects, int len_objs);
 
 //graphics
 SDL_Texture* load_texture(const char* filename, SDL_Renderer* renderer);
