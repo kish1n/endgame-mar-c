@@ -6,27 +6,27 @@
 #define SCREEN_WIDTH 1920
 #define SCREEN_HEIGHT 1080
 
-typedef struct coordinates {
+typedef struct Coordinates {
     int x;
     int y;
 } coord;
 
-typedef struct character {
+typedef struct Character {
     coord position;
-} hero;
+} Hero;
 
-typedef struct {
+typedef struct board {
     SDL_Rect topWall;
     SDL_Rect bottomWall;
     SDL_Rect leftWall;
     SDL_Rect rightWall;
     SDL_Texture* bg;
-} Room;
+} Board;
 
-typedef struct {
+typedef struct object {
     SDL_Texture* bg;
     SDL_Rect position;
-} object;
+} Object;
 
 //errs
 void sdl_init();
@@ -34,19 +34,19 @@ SDL_Window* sdl_window();
 SDL_Renderer* sdl_render(SDL_Window* window);
 
 //entities
-Room room_build(int roomWidth, int roomHeight, SDL_Texture* bgPath);
-object* init_first_room(SDL_Renderer* renderer);
-void render_all_room(SDL_Renderer* renderer, const Room* room, object* objects, int len_objs);
-void render_obj(SDL_Renderer* renderer, object obj);
+Board board_build(int roomWidth, int roomHeight, SDL_Texture* bgPath);
+Object* init_first_room(SDL_Renderer* renderer);
+void render_all_room(SDL_Renderer* renderer, const Board* room, Object* objects, int len_objs);
+void render_obj(SDL_Renderer* renderer, Object obj);
 
 //mechanics
-void update_hero(SDL_Rect* hero, int speed, Room* room, bool* running);
+void update_hero(SDL_Rect* hero, int speed, Board* board, bool* running);
 bool check_collision(const SDL_Rect* a, const SDL_Rect* b);
 
 //render
-Room render_room(SDL_Renderer* renderer, const Room* room);
+Board render_board(SDL_Renderer* renderer, const Board* room);
 void render_hero(SDL_Renderer* renderer, SDL_Rect* hero, SDL_Texture* texture);
-void render_main(SDL_Renderer* renderer, SDL_Rect* hero, Room* room, object* objects, int len_objs);
+void render_main(SDL_Renderer* renderer, SDL_Rect* hero, Board* board, Object* objects, int len_objs);
 
 //graphics
 SDL_Texture* load_texture(const char* filename, SDL_Renderer* renderer);

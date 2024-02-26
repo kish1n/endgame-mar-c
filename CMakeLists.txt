@@ -11,7 +11,7 @@ link_directories(resource/SDL2_image-2.8.2/lib/x64)
 
 add_executable(endgame
         resource/header.h
-        src/entities/room_build.c
+        src/entities/board_build.c
         src/errs/sdl_init.c
         src/errs/sdl_window.c
         src/errs/sdl_render.c

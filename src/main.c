@@ -5,7 +5,7 @@ int WinMain(int argc, char *argv[]) {
     sdl_init();
     SDL_Window* window = sdl_window();
     SDL_Renderer* renderer = sdl_render(window);
-    SDL_Rect hero = { SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, 120, 160};
+    SDL_Rect hero = { SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, 160, 275};
 
     SDL_Texture* bgTexture = load_texture("../resource/static/room-floor/first-room-floor.PNG", renderer);
 
@@ -17,14 +17,13 @@ int WinMain(int argc, char *argv[]) {
     int speed = 1;
 
     //first room
-    Room room = room_build(1480, 600, bgTexture); // Создание комнаты
-    object* first_rom_obj = init_first_room(renderer);
+    Board room = board_build(1480, 600, bgTexture); // Создание комнаты
+    Object* first_rom_obj = init_first_room(renderer);
 
-    int len1 = 0;
-    while (first_rom_obj[len1].bg != NULL) {
-        len1++;
-    }
-
+    int len1 = 11;
+//    while (first_rom_obj[len1].bg != NULL) {
+//        len1++;
+//    }
 
     printf("len: %d\n", len1);
 
@@ -36,6 +35,10 @@ int WinMain(int argc, char *argv[]) {
 
         SDL_RenderPresent(renderer); // Обновление экрана
         SDL_Delay(1); // Управление частотой кадров
+    }
+
+    for (int i = 0; i < len1; i++) {
+        SDL_DestroyTexture(first_rom_obj[i].bg);
     }
 
     SDL_DestroyTexture(bgTexture);
