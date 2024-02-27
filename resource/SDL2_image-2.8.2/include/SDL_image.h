@@ -2188,6 +2188,7 @@ extern DECLSPEC IMG_Animation * SDLCALL IMG_LoadWEBPAnimation_RW(SDL_RWops *src)
 #ifdef __cplusplus
 }
 #endif
+
 #include "../../SDL2-2.30.0/include/close_code.h"
 
 #endif /* SDL_IMAGE_H_ */
