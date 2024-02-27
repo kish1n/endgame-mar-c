@@ -6,7 +6,5 @@ void render_all_room(SDL_Renderer* renderer, const Board* room, Object* objects,
 
     for (int i = 0; i < len_objs; i++) {
         render_obj(renderer, objects[i]);
-        Board board = board_build(objects[i]);
-        render_board(renderer, &board);
     }
 }

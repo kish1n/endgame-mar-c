@@ -1,6 +1,5 @@
 #include "../../resource/header.h"
 
-
 Object* init_room(SDL_Renderer* renderer, char** filenames, SDL_Rect* positions, bool** dummies) {
 
     Object* objects = malloc(sizeof(Object) * 11);
