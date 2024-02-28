@@ -1,0 +1,3 @@
+C:/engame_menushka_inGame/cmake-build-debug/CMakeFiles/endgame.dir
+C:/engame_menushka_inGame/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/engame_menushka_inGame/cmake-build-debug/CMakeFiles/rebuild_cache.dir
