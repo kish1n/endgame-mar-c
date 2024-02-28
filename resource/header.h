@@ -47,7 +47,7 @@ int WinMain(int argc, char* args[]);
 
 int menu();
 
-int start_game(SDL_Window* window, SDL_Renderer* render);
+int start_game(SDL_Window* window, SDL_Renderer* render, Mix_Chunk* clickButton);
 
 //errs
 void sdl_init();
@@ -59,18 +59,19 @@ Object* init_room(SDL_Renderer* renderer, char** filenames, SDL_Rect* positions,
                   void (*onClickFunctions[])(SDL_Renderer* render, SDL_Texture** texture, SDL_Rect* position1), int length);
 Board room_build(int roomWidth, int roomHeight, SDL_Texture* bgPath);
 Board board_build(Object obj);
-
+void nuul_obj(SDL_Renderer* render, SDL_Texture** texture, SDL_Rect* position);
+void handle_mouse_click_for_objects(SDL_Renderer* render, SDL_Event e, Object* objects, int len_obj, SDL_Texture** active_texture, SDL_Rect* active_position, Object* active_obj, bool* renderActiveObject);
 //entities-first-room
 void open_book(SDL_Renderer* render, SDL_Texture** texture, SDL_Rect* position);
 
 //mechanics
 void update_hero(SDL_Rect* hero, int speed, Board* room, bool* running, Object* objects, int len_objs);
 bool check_collision(const SDL_Rect* a, const SDL_Rect* b);
-
+void main_event_handler(SDL_Event *event, SDL_Renderer* render, Object** first_rom_obj, int *len1, Mix_Chunk** clickButton, bool* isMenuOpen, bool* settingsOpened, bool* renderActiveObject, SDL_Texture** active_texture, SDL_Rect* active_position, Object* active_obj);
 //render
 Board render_board(SDL_Renderer* renderer, const Board* room);
 void render_hero(SDL_Renderer* renderer, SDL_Rect* hero, SDL_Texture* texture);
-void render_main(SDL_Renderer* renderer, SDL_Rect* hero, Board* room, Object* objects, SDL_Texture* mainHeroTexture, int len_objs);
+void render_main(SDL_Renderer* renderer, SDL_Rect* hero, Board* room, Object* act_obj, Object* objects, SDL_Texture* mainHeroTexture, int len_objs);
 void render_all_room(SDL_Renderer* renderer, const Board* room, Object* objects, int len_objs);
 void render_obj(SDL_Renderer* renderer, Object obj);
 
@@ -84,9 +85,14 @@ void init_texture_menu(SDL_Renderer* renderer, SDL_Texture* backgroundTexture[],
                        SDL_Texture* buttonTextures[], SDL_Texture* settingsButtonTextures[]);
 Mix_Chunk* load_sound(const char* path);
 void play_sound(Mix_Chunk* sound);
-
+void init_texture_menuInGane(SDL_Renderer* renderer, SDL_Texture** backgroundsettings, SDL_Texture** menuInGameBackground, SDL_Texture* menuButtonTexture[], SDL_Texture* settingsButtonTextures[]);
+void win_build_Settings(SDL_Renderer* renderer, SDL_Window* window ,SDL_Texture* settingsButtonTextures[], SDL_Texture* backgroundsettings);
+void win_buildMenuButtons(SDL_Renderer* renderer, SDL_Texture* menuButtonTexture[]);
 void win_buildFHD(SDL_Renderer* renderer, SDL_Window* window, SDL_Texture* backgroundTexture[], SDL_Texture* buttonTextures[], SDL_Texture* settingsButtonTextures[], SDL_Texture* authorsBackgroundTexture, Mix_Chunk* clickButton, SDL_Event e, bool inSettingsPage, bool inAuthorsPage);
 void win_buildHD(SDL_Renderer* renderer, SDL_Window* window, SDL_Texture* backgroundTexture[], SDL_Texture* buttonTextures[], SDL_Texture* settingsButtonTextures[], SDL_Texture* authorsBackgroundTexture, Mix_Chunk* clickButton, SDL_Event e, bool inSettingsPage, bool inAuthorsPage);
 void win_buildNHD(SDL_Renderer* renderer, SDL_Window* window, SDL_Texture* backgroundTexture[], SDL_Texture* buttonTextures[], SDL_Texture* settingsButtonTextures[], SDL_Texture* authorsBackgroundTexture, Mix_Chunk* clickButton, SDL_Event e, bool inSettingsPage, bool inAuthorsPage);
 void play_click_sound(Mix_Chunk* sound);
 bool handle_mouse_button_down(SDL_Event e, int x_min, int x_max, int y_min, int y_max, void (*action)(Mix_Chunk*), Mix_Chunk* soundEffect);
+void ingame_menu_esc_render(bool *isMenuOpen, bool *settingsOpened, Mix_Chunk *clickButton);
+void ingame_main_menu_set(SDL_Event event, bool *isMenuOpen, bool *settingsOpened, Mix_Chunk *clickButton);
+void ingame_voice_menu_set(SDL_Event event, bool *isMenuOpen, bool *settingsOpened, Mix_Chunk *clickButton);

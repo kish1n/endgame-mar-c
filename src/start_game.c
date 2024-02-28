@@ -1,62 +1,8 @@
 #include "../resource/header.h"
 
-void nuul_obj(SDL_Renderer* render, SDL_Texture** texture, SDL_Rect* position) {
-    printf("function1\n");
-}
-
-void ingame_menu_esc_render(bool *isMenuOpen, bool *settingsOpened, Mix_Chunk *clickButton) {
-    if (!(*isMenuOpen)) {
-        play_sound(clickButton);
-        *isMenuOpen = true;
-    } else if (*isMenuOpen && *settingsOpened) {
-        play_sound(clickButton);
-        *settingsOpened = false;
-    } else if (*isMenuOpen) {
-        play_sound(clickButton);
-        *isMenuOpen = false;
-    }
-    if (*settingsOpened) {
-        *settingsOpened = false;
-    }
-}
-
-void ingame_main_menu_set(SDL_Event event, bool *isMenuOpen, bool *settingsOpened, Mix_Chunk *clickButton) {
-    if(handle_mouse_button_down(event, 680, 1280, 300, 450, play_sound, clickButton)) {
-        *isMenuOpen = false;
-    }
-    if(handle_mouse_button_down(event, 680, 1280, 500, 650, play_sound, clickButton)) {
-        *settingsOpened = true;
-    }
-    if(handle_mouse_button_down(event, 680, 1280, 700, 850, play_sound, clickButton)) {
-        SDL_Quit();
-        exit(0);
-    }
-}
-
-void ingame_voice_menu_set(SDL_Event event, bool *isMenuOpen, bool *settingsOpened, Mix_Chunk *clickButton) {
-    if (handle_mouse_button_down(event, 720, 920, 815, 890, play_sound, clickButton)) {
-        //volume на паузу
-    }
-    if (handle_mouse_button_down(event, 1020, 1220, 815, 890, play_sound, clickButton)) {
-        //volume на плей
-    }
-}
-
-void handle_mouse_click_for_objects(SDL_Renderer* render, SDL_Event e, Object* objects, int len_obj, SDL_Texture** active_texture, SDL_Rect* active_position, Object* active_obj, bool* renderActiveObject) {
-    int x, y;
-    SDL_GetMouseState(&x, &y);
-    for (int i = 0; i < len_obj; i++) {
-        if (x >= objects[i].position.x &&
-            x <= objects[i].position.x + objects[i].position.w &&
-            y >= objects[i].position.y &&
-            y <= objects[i].position.y + objects[i].position.h) {
-            if (objects[i].onClick != NULL) {
-                objects[i].onClick(render, active_texture, active_position);
-                *active_obj = (Object) {*active_texture, *active_position, 0, 0, true, NULL};
-                *renderActiveObject = true;
-            }
-        }
-    }
+void game_cutscene(SDL_Renderer* renderer)
+{
+    render_bg(renderer, load_texture("../resource/static/cutscene_bg.PNG", renderer));
 }
 
 
@@ -177,35 +123,33 @@ int start_game(SDL_Window* window, SDL_Renderer* render, Mix_Chunk* clickButton)
     bool settingsOpened = false;
     bool isRunning = true;
 
+    Uint32 startTime = SDL_GetTicks();
+    bool cutsceneActive = true;
+
+    while (SDL_GetTicks() - startTime < 10000 && cutsceneActive) {
+        SDL_Event event;
+        while (SDL_PollEvent(&event)) {
+            if (event.type == SDL_KEYDOWN && event.key.keysym.sym == SDLK_SPACE) {
+                cutsceneActive = false;
+                break;
+            }
+        }
+
+        if (!cutsceneActive) break;
+
+        SDL_RenderClear(render);
+        game_cutscene(render); // Использование вашей функции для рендеринга фона
+        SDL_RenderPresent(render);
+        SDL_Delay(100); // небольшая задержка для снижения нагрузки на ЦП
+    }
+
 
     while (isRunning) {
         SDL_Event event;
         while (SDL_PollEvent(&event)) {
-            if (event.type == SDL_KEYDOWN) {
-                if (event.key.keysym.sym == SDLK_ESCAPE) {
-                    ingame_menu_esc_render(&isMenuOpen, &settingsOpened, clickButton);
-                } else if (event.key.keysym.sym == SDLK_SPACE) {
-                    if (renderActiveObject) {
-                        renderActiveObject = false;
-                        if (active_texture != NULL) {
-                            SDL_DestroyTexture(active_texture);
-                            active_texture = NULL;
-                        }
-                    }
-                }
-            } else if (event.type == SDL_MOUSEBUTTONDOWN) {
-                if (isMenuOpen && !settingsOpened) {
-                    ingame_main_menu_set(event, &isMenuOpen, &settingsOpened, clickButton);
-                } else if (settingsOpened) {
-                    ingame_voice_menu_set(event, &isMenuOpen, &settingsOpened, clickButton);
-                } else {
-                    handle_mouse_click_for_objects(render, event, first_rom_obj, len1, &active_texture,
-                                                   &active_position, &active_obj, &renderActiveObject);
-                }
-            }
+            main_event_handler(&event, render, &first_rom_obj, &len1, &clickButton, &isMenuOpen, &settingsOpened, &renderActiveObject, &active_texture, &active_position, &active_obj);
         }
 
-        //render
         if (isMenuOpen) {
             if (settingsOpened) {
                 win_build_Settings(render, window, settingsButtonTextures, backgroundsettings);
