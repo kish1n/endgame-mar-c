@@ -11,10 +11,5 @@ Board room_build(int roomWidth, int roomHeight, SDL_Texture* bgPath) {
     room.rightWall = (SDL_Rect){roomX + roomWidth, roomY -140 , 10, roomHeight + 140};
     room.bg = bgPath;
 
-    printf("Top Wall: %d %d %d %d\n", room.topWall.x, room.topWall.y, room.topWall.w, room.topWall.h);
-    printf("Bottom Wall: %d %d %d %d\n", room.bottomWall.x, room.bottomWall.y, room.bottomWall.w, room.bottomWall.h);
-    printf("Left Wall: %d %d %d %d\n", room.leftWall.x, room.leftWall.y, room.leftWall.w, room.leftWall.h);
-    printf("Right Wall: %d %d %d %d\n", room.rightWall.x, room.rightWall.y, room.rightWall.w, room.rightWall.h);
-
     return room;
 }

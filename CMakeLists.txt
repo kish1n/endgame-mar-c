@@ -47,7 +47,9 @@ add_executable(endgame
         src/entities/room_build.c
         src/entities/init_room.c
         src/entities/board_build.c
-        src/entities/init_first_room.c)
+
+        src/entities/objects/first_room/open_book.c
+)
 
 
 target_link_libraries(endgame SDL2 SDL2_ttf SDL2_mixer SDL2_image)

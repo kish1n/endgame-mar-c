@@ -44,7 +44,6 @@ void update_hero(SDL_Rect* hero, int speed, Board* room, bool* running, Object* 
             }
         }
 
-        // Обновление положения героя, если не было столкновений
         if (!collisionWithObjects) {
             hero->x = newX;
             hero->y = newY;

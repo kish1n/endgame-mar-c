@@ -60,7 +60,7 @@
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 53,
+				"line" : 55,
 				"parent" : 0
 			},
 			{
@@ -422,7 +422,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/entities/init_first_room.c",
+			"path" : "src/entities/objects/first_room/open_book.c",
 			"sourceGroupIndex" : 1
 		}
 	],
