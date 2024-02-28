@@ -35,9 +35,11 @@ add_executable(endgame
         src/menu/win_buildFHD.c
         src/menu/win_buildHD.c
         src/menu/win_buildNHD.c
+        src/menu/init_texture_menuInGame.c
+        src/menu/win_build_Settings.c
+        src/menu/win_buildMenuButtons.c
 
         src/render/render_hero.c
-        src/render/render_board.c
         src/render/render_main.c
         src/render/render_bg.c
         src/render/render_button.c
@@ -49,6 +51,17 @@ add_executable(endgame
         src/entities/board_build.c
 
         src/entities/objects/first_room/open_book.c
+        src/render/ingame_menu_esc_render.c
+        src/menu/ingame_main_menu_set.c
+        src/menu/ingame_voice_menu_set.c
+        src/entities/handle_mouse_click_for_objects.c
+        src/entities/nuul_obj.c
+        src/mechanics/main_event_handler.c
+        src/entities/init_arr4room_1.c
+        src/mechanics/game_cutscene.c
+        src/entities/door_create.c
+        src/render/render_door.c
+        src/render/render_room.c
 )
 
 

@@ -1,6 +1,6 @@
 #include "../../resource/header.h"
 
-void update_hero(SDL_Rect* hero, int speed, Board* room, bool* running, Object* objects, int len_objs) {
+int update_hero(SDL_Rect* hero, int speed, Board* room, bool* running, Object* objects, int len_objs, Door* doors, int len_doors) {
     SDL_Event event;
     while (SDL_PollEvent(&event)) {
         if (event.type == SDL_QUIT) {
@@ -44,9 +44,18 @@ void update_hero(SDL_Rect* hero, int speed, Board* room, bool* running, Object* 
             }
         }
 
+        for (int i = 0; i < len_doors; i++) {
+            if (check_collision(&newHeroRect, &doors[i].position)) {
+                printf("Door to room: %d\n", doors[i].toRoom);
+                return doors[i].toRoom; // Если столкновение найдено, прерываем цикл
+            }
+        }
+
         if (!collisionWithObjects) {
             hero->x = newX;
             hero->y = newY;
         }
     }
+
+    return -1;
 }
