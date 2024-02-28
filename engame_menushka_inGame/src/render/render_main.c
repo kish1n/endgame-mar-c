@@ -8,7 +8,6 @@ void render_main(SDL_Renderer* renderer, SDL_Rect* hero, Board* room, Object* ob
 
     // Рендеринг комнаты
     if (room != NULL) {
-
         render_all_room(renderer, room, objects, len_objs);
     }
 

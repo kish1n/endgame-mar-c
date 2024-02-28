@@ -42,6 +42,9 @@ add_executable(endgame
         src/menu/win_buildMenuButtons.c
         src/menu/win_build_Settings.c
         src/menu/init_texture_menuInGame.c
+        src/render/render_board_thirdRoom.c
+        src/mechanics/update_hero_thirdRoom.c
+        src/entities/board_build_thirdRoom.c
 )
 
 target_link_libraries(endgame SDL2 SDL2_ttf SDL2_mixer SDL2_image)

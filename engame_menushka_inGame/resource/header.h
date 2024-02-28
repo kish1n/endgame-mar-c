@@ -24,6 +24,23 @@ typedef struct board {
     SDL_Rect leftWall;
     SDL_Rect rightWall;
     SDL_Texture* bg;
+    //границы для 3 карты
+    SDL_Rect wall1;
+    SDL_Rect wall2;
+    SDL_Rect wall3;
+    SDL_Rect wall4;
+    SDL_Rect wall5;
+    SDL_Rect wall6;
+    SDL_Rect wall7;
+    SDL_Rect wall8;
+    SDL_Rect wall9;
+    SDL_Rect wall10;
+    SDL_Rect wall11;
+    SDL_Rect wall12;
+    SDL_Rect wall13;
+    SDL_Rect wall14;
+
+
 } Board;
 
 typedef struct object {
@@ -48,15 +65,18 @@ Board board_build(int roomWidth, int roomHeight, SDL_Texture* bgPath);
 Object* init_first_room(SDL_Renderer* renderer);
 void render_all_room(SDL_Renderer* renderer, const Board* room, Object* objects, int len_objs);
 void render_obj(SDL_Renderer* renderer, Object obj);
+Board board_build_thirdRoom(Board* room3);
 
 //mechanics
 void update_hero(SDL_Rect* hero, int speed, Board* board, bool* running);
 bool check_collision(const SDL_Rect* a, const SDL_Rect* b);
+void update_hero_thirdRoom(SDL_Rect* hero, int speed, Board* room, bool* running);
 
 //render
 Board render_board(SDL_Renderer* renderer, const Board* room);
 void render_hero(SDL_Renderer* renderer, SDL_Rect* hero, SDL_Texture* texture);
 void render_main(SDL_Renderer* renderer, SDL_Rect* hero, Board* board, Object* objects, int len_objs);
+Board render_board_thirdRoom(SDL_Renderer* renderer, const Board* board);
 
 ////graphics
 SDL_Texture* load_texture(const char* filename, SDL_Renderer* renderer);

@@ -6,9 +6,9 @@
 int start_game(SDL_Window* window, SDL_Renderer* renderer) {
 
     sdl_init();
-    SDL_Rect hero = { SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, 160, 320};
+    SDL_Rect hero = { 1400, 910, 50, 110};
 
-    SDL_Texture* bgTexture = load_texture("../resource/static/room-floor/first-room-floor.PNG", renderer);
+    SDL_Texture* bgTexture3 = load_texture("../resource/static/room-floor/third-room-floor.PNG", renderer);
     Mix_Chunk* clickbutton = load_sound("../menu/volume/clickbutton.wav");
     SDL_Texture* menuInGameBackground;
     SDL_Texture* backgroundsettings;
@@ -16,18 +16,11 @@ int start_game(SDL_Window* window, SDL_Renderer* renderer) {
     SDL_Texture* menuButtonTexture[3];
     init_texture_menuInGane(renderer, &backgroundsettings, &menuInGameBackground, menuButtonTexture, settingsButtonTextures);
 
-
-    if (!bgTexture || !menuInGameBackground || !menuButtonTexture[0] || !menuButtonTexture[1] || !menuButtonTexture[2]) {
-        printf("err texture\n");
-        exit(1);
-    }
-
     int speed = 1;
 
-    //first room
-    Board room = board_build(1480, 600, bgTexture); // Создание комнаты
-    Object* first_rom_obj = init_first_room(renderer);
-
+    //third room
+    Board room3;
+    board_build_thirdRoom(&room3);
     int len1 = 11;
     // while (first_rom_obj[len1].bg != NULL) {
     //     len1++;
@@ -41,7 +34,7 @@ int start_game(SDL_Window* window, SDL_Renderer* renderer) {
 
     while (!quit) {
         SDL_Event event;
-        update_hero(&hero, speed, &room, &quit); // Обновление позиции героя
+       update_hero_thirdRoom(&hero, speed, &room3, &quit); // Обновление позиции героя
 
         if (isMenuOpen) {
             if (settingsOpened) {
@@ -51,8 +44,15 @@ int start_game(SDL_Window* window, SDL_Renderer* renderer) {
                 win_buildMenuButtons(renderer, menuButtonTexture);
             }
         } else {
-            render_main(renderer, &hero, &room, first_rom_obj, len1); // Отрисовка кадра
+            //
+            SDL_Texture* mainHeroTexture = IMG_LoadTexture(renderer, "../resource/static/ghost1.PNG");
+                render_bg(renderer, bgTexture3);
+                render_board_thirdRoom(renderer, &room3);
+
+                render_hero(renderer, &hero, mainHeroTexture);
             SDL_RenderPresent(renderer);
+            SDL_RenderPresent(renderer);
+            //
         }
 
         SDL_Delay(1); // Управление частотой кадров
@@ -103,11 +103,8 @@ int start_game(SDL_Window* window, SDL_Renderer* renderer) {
         }
     }
 
-    for (int i = 0; i < len1; i++) {
-        SDL_DestroyTexture(first_rom_obj[i].bg);
-    }
 
-    SDL_DestroyTexture(bgTexture);
+    SDL_DestroyTexture(bgTexture3);
     SDL_DestroyTexture(menuInGameBackground);
     SDL_DestroyTexture(backgroundsettings);
     for (int i = 0; i < 3; ++i)
