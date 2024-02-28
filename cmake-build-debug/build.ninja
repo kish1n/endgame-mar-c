@@ -55,8 +55,6 @@ build CMakeFiles/endgame.dir/src/main.c.obj: C_COMPILER__endgame_unscanned_Debug
   INCLUDES = -IC:/projects/endgame/resource -IC:/projects/endgame/src
   OBJECT_DIR = CMakeFiles\endgame.dir
   OBJECT_FILE_DIR = CMakeFiles\endgame.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\endgame.dir\
-  TARGET_PDB = endgame.pdb
 
 build CMakeFiles/endgame.dir/src/start_game.c.obj: C_COMPILER__endgame_unscanned_Debug C$:/projects/endgame/src/start_game.c || cmake_object_order_depends_target_endgame
   DEP_FILE = CMakeFiles\endgame.dir\src\start_game.c.obj.d
@@ -64,8 +62,6 @@ build CMakeFiles/endgame.dir/src/start_game.c.obj: C_COMPILER__endgame_unscanned
   INCLUDES = -IC:/projects/endgame/resource -IC:/projects/endgame/src
   OBJECT_DIR = CMakeFiles\endgame.dir
   OBJECT_FILE_DIR = CMakeFiles\endgame.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\endgame.dir\
-  TARGET_PDB = endgame.pdb
 
 build CMakeFiles/endgame.dir/src/errs/sdl_init.c.obj: C_COMPILER__endgame_unscanned_Debug C$:/projects/endgame/src/errs/sdl_init.c || cmake_object_order_depends_target_endgame
   DEP_FILE = CMakeFiles\endgame.dir\src\errs\sdl_init.c.obj.d
@@ -73,8 +69,6 @@ build CMakeFiles/endgame.dir/src/errs/sdl_init.c.obj: C_COMPILER__endgame_unscan
   INCLUDES = -IC:/projects/endgame/resource -IC:/projects/endgame/src
   OBJECT_DIR = CMakeFiles\endgame.dir
   OBJECT_FILE_DIR = CMakeFiles\endgame.dir\src\errs
-  TARGET_COMPILE_PDB = CMakeFiles\endgame.dir\
-  TARGET_PDB = endgame.pdb
 
 build CMakeFiles/endgame.dir/src/errs/sdl_window.c.obj: C_COMPILER__endgame_unscanned_Debug C$:/projects/endgame/src/errs/sdl_window.c || cmake_object_order_depends_target_endgame
   DEP_FILE = CMakeFiles\endgame.dir\src\errs\sdl_window.c.obj.d
@@ -82,8 +76,6 @@ build CMakeFiles/endgame.dir/src/errs/sdl_window.c.obj: C_COMPILER__endgame_unsc
   INCLUDES = -IC:/projects/endgame/resource -IC:/projects/endgame/src
   OBJECT_DIR = CMakeFiles\endgame.dir
   OBJECT_FILE_DIR = CMakeFiles\endgame.dir\src\errs
-  TARGET_COMPILE_PDB = CMakeFiles\endgame.dir\
-  TARGET_PDB = endgame.pdb
 
 build CMakeFiles/endgame.dir/src/errs/sdl_render.c.obj: C_COMPILER__endgame_unscanned_Debug C$:/projects/endgame/src/errs/sdl_render.c || cmake_object_order_depends_target_endgame
   DEP_FILE = CMakeFiles\endgame.dir\src\errs\sdl_render.c.obj.d
@@ -91,8 +83,6 @@ build CMakeFiles/endgame.dir/src/errs/sdl_render.c.obj: C_COMPILER__endgame_unsc
   INCLUDES = -IC:/projects/endgame/resource -IC:/projects/endgame/src
   OBJECT_DIR = CMakeFiles\endgame.dir
   OBJECT_FILE_DIR = CMakeFiles\endgame.dir\src\errs
-  TARGET_COMPILE_PDB = CMakeFiles\endgame.dir\
-  TARGET_PDB = endgame.pdb
 
 build CMakeFiles/endgame.dir/src/graphics/load_texture.c.obj: C_COMPILER__endgame_unscanned_Debug C$:/projects/endgame/src/graphics/load_texture.c || cmake_object_order_depends_target_endgame
   DEP_FILE = CMakeFiles\endgame.dir\src\graphics\load_texture.c.obj.d
@@ -100,8 +90,6 @@ build CMakeFiles/endgame.dir/src/graphics/load_texture.c.obj: C_COMPILER__endgam
   INCLUDES = -IC:/projects/endgame/resource -IC:/projects/endgame/src
   OBJECT_DIR = CMakeFiles\endgame.dir
   OBJECT_FILE_DIR = CMakeFiles\endgame.dir\src\graphics
-  TARGET_COMPILE_PDB = CMakeFiles\endgame.dir\
-  TARGET_PDB = endgame.pdb
 
 build CMakeFiles/endgame.dir/src/graphics/load_sound.c.obj: C_COMPILER__endgame_unscanned_Debug C$:/projects/endgame/src/graphics/load_sound.c || cmake_object_order_depends_target_endgame
   DEP_FILE = CMakeFiles\endgame.dir\src\graphics\load_sound.c.obj.d
@@ -109,8 +97,6 @@ build CMakeFiles/endgame.dir/src/graphics/load_sound.c.obj: C_COMPILER__endgame_
   INCLUDES = -IC:/projects/endgame/resource -IC:/projects/endgame/src
   OBJECT_DIR = CMakeFiles\endgame.dir
   OBJECT_FILE_DIR = CMakeFiles\endgame.dir\src\graphics
-  TARGET_COMPILE_PDB = CMakeFiles\endgame.dir\
-  TARGET_PDB = endgame.pdb
 
 build CMakeFiles/endgame.dir/src/graphics/play_sound.c.obj: C_COMPILER__endgame_unscanned_Debug C$:/projects/endgame/src/graphics/play_sound.c || cmake_object_order_depends_target_endgame
   DEP_FILE = CMakeFiles\endgame.dir\src\graphics\play_sound.c.obj.d
@@ -118,8 +104,6 @@ build CMakeFiles/endgame.dir/src/graphics/play_sound.c.obj: C_COMPILER__endgame_
   INCLUDES = -IC:/projects/endgame/resource -IC:/projects/endgame/src
   OBJECT_DIR = CMakeFiles\endgame.dir
   OBJECT_FILE_DIR = CMakeFiles\endgame.dir\src\graphics
-  TARGET_COMPILE_PDB = CMakeFiles\endgame.dir\
-  TARGET_PDB = endgame.pdb
 
 build CMakeFiles/endgame.dir/src/mechanics/update_hero.c.obj: C_COMPILER__endgame_unscanned_Debug C$:/projects/endgame/src/mechanics/update_hero.c || cmake_object_order_depends_target_endgame
   DEP_FILE = CMakeFiles\endgame.dir\src\mechanics\update_hero.c.obj.d
@@ -127,8 +111,6 @@ build CMakeFiles/endgame.dir/src/mechanics/update_hero.c.obj: C_COMPILER__endgam
   INCLUDES = -IC:/projects/endgame/resource -IC:/projects/endgame/src
   OBJECT_DIR = CMakeFiles\endgame.dir
   OBJECT_FILE_DIR = CMakeFiles\endgame.dir\src\mechanics
-  TARGET_COMPILE_PDB = CMakeFiles\endgame.dir\
-  TARGET_PDB = endgame.pdb
 
 build CMakeFiles/endgame.dir/src/mechanics/check_collision.c.obj: C_COMPILER__endgame_unscanned_Debug C$:/projects/endgame/src/mechanics/check_collision.c || cmake_object_order_depends_target_endgame
   DEP_FILE = CMakeFiles\endgame.dir\src\mechanics\check_collision.c.obj.d
@@ -136,8 +118,6 @@ build CMakeFiles/endgame.dir/src/mechanics/check_collision.c.obj: C_COMPILER__en
   INCLUDES = -IC:/projects/endgame/resource -IC:/projects/endgame/src
   OBJECT_DIR = CMakeFiles\endgame.dir
   OBJECT_FILE_DIR = CMakeFiles\endgame.dir\src\mechanics
-  TARGET_COMPILE_PDB = CMakeFiles\endgame.dir\
-  TARGET_PDB = endgame.pdb
 
 build CMakeFiles/endgame.dir/src/menu/handle_mouse_button_down.c.obj: C_COMPILER__endgame_unscanned_Debug C$:/projects/endgame/src/menu/handle_mouse_button_down.c || cmake_object_order_depends_target_endgame
   DEP_FILE = CMakeFiles\endgame.dir\src\menu\handle_mouse_button_down.c.obj.d
@@ -145,8 +125,6 @@ build CMakeFiles/endgame.dir/src/menu/handle_mouse_button_down.c.obj: C_COMPILER
   INCLUDES = -IC:/projects/endgame/resource -IC:/projects/endgame/src
   OBJECT_DIR = CMakeFiles\endgame.dir
   OBJECT_FILE_DIR = CMakeFiles\endgame.dir\src\menu
-  TARGET_COMPILE_PDB = CMakeFiles\endgame.dir\
-  TARGET_PDB = endgame.pdb
 
 build CMakeFiles/endgame.dir/src/menu/init_texture_menu.c.obj: C_COMPILER__endgame_unscanned_Debug C$:/projects/endgame/src/menu/init_texture_menu.c || cmake_object_order_depends_target_endgame
   DEP_FILE = CMakeFiles\endgame.dir\src\menu\init_texture_menu.c.obj.d
@@ -154,8 +132,6 @@ build CMakeFiles/endgame.dir/src/menu/init_texture_menu.c.obj: C_COMPILER__endga
   INCLUDES = -IC:/projects/endgame/resource -IC:/projects/endgame/src
   OBJECT_DIR = CMakeFiles\endgame.dir
   OBJECT_FILE_DIR = CMakeFiles\endgame.dir\src\menu
-  TARGET_COMPILE_PDB = CMakeFiles\endgame.dir\
-  TARGET_PDB = endgame.pdb
 
 build CMakeFiles/endgame.dir/src/menu/menu_main.c.obj: C_COMPILER__endgame_unscanned_Debug C$:/projects/endgame/src/menu/menu_main.c || cmake_object_order_depends_target_endgame
   DEP_FILE = CMakeFiles\endgame.dir\src\menu\menu_main.c.obj.d
@@ -163,8 +139,6 @@ build CMakeFiles/endgame.dir/src/menu/menu_main.c.obj: C_COMPILER__endgame_unsca
   INCLUDES = -IC:/projects/endgame/resource -IC:/projects/endgame/src
   OBJECT_DIR = CMakeFiles\endgame.dir
   OBJECT_FILE_DIR = CMakeFiles\endgame.dir\src\menu
-  TARGET_COMPILE_PDB = CMakeFiles\endgame.dir\
-  TARGET_PDB = endgame.pdb
 
 build CMakeFiles/endgame.dir/src/menu/play_click_sound.c.obj: C_COMPILER__endgame_unscanned_Debug C$:/projects/endgame/src/menu/play_click_sound.c || cmake_object_order_depends_target_endgame
   DEP_FILE = CMakeFiles\endgame.dir\src\menu\play_click_sound.c.obj.d
@@ -172,8 +146,6 @@ build CMakeFiles/endgame.dir/src/menu/play_click_sound.c.obj: C_COMPILER__endgam
   INCLUDES = -IC:/projects/endgame/resource -IC:/projects/endgame/src
   OBJECT_DIR = CMakeFiles\endgame.dir
   OBJECT_FILE_DIR = CMakeFiles\endgame.dir\src\menu
-  TARGET_COMPILE_PDB = CMakeFiles\endgame.dir\
-  TARGET_PDB = endgame.pdb
 
 build CMakeFiles/endgame.dir/src/menu/win_buildFHD.c.obj: C_COMPILER__endgame_unscanned_Debug C$:/projects/endgame/src/menu/win_buildFHD.c || cmake_object_order_depends_target_endgame
   DEP_FILE = CMakeFiles\endgame.dir\src\menu\win_buildFHD.c.obj.d
@@ -181,8 +153,6 @@ build CMakeFiles/endgame.dir/src/menu/win_buildFHD.c.obj: C_COMPILER__endgame_un
   INCLUDES = -IC:/projects/endgame/resource -IC:/projects/endgame/src
   OBJECT_DIR = CMakeFiles\endgame.dir
   OBJECT_FILE_DIR = CMakeFiles\endgame.dir\src\menu
-  TARGET_COMPILE_PDB = CMakeFiles\endgame.dir\
-  TARGET_PDB = endgame.pdb
 
 build CMakeFiles/endgame.dir/src/menu/win_buildHD.c.obj: C_COMPILER__endgame_unscanned_Debug C$:/projects/endgame/src/menu/win_buildHD.c || cmake_object_order_depends_target_endgame
   DEP_FILE = CMakeFiles\endgame.dir\src\menu\win_buildHD.c.obj.d
@@ -190,8 +160,6 @@ build CMakeFiles/endgame.dir/src/menu/win_buildHD.c.obj: C_COMPILER__endgame_uns
   INCLUDES = -IC:/projects/endgame/resource -IC:/projects/endgame/src
   OBJECT_DIR = CMakeFiles\endgame.dir
   OBJECT_FILE_DIR = CMakeFiles\endgame.dir\src\menu
-  TARGET_COMPILE_PDB = CMakeFiles\endgame.dir\
-  TARGET_PDB = endgame.pdb
 
 build CMakeFiles/endgame.dir/src/menu/win_buildNHD.c.obj: C_COMPILER__endgame_unscanned_Debug C$:/projects/endgame/src/menu/win_buildNHD.c || cmake_object_order_depends_target_endgame
   DEP_FILE = CMakeFiles\endgame.dir\src\menu\win_buildNHD.c.obj.d
@@ -199,8 +167,6 @@ build CMakeFiles/endgame.dir/src/menu/win_buildNHD.c.obj: C_COMPILER__endgame_un
   INCLUDES = -IC:/projects/endgame/resource -IC:/projects/endgame/src
   OBJECT_DIR = CMakeFiles\endgame.dir
   OBJECT_FILE_DIR = CMakeFiles\endgame.dir\src\menu
-  TARGET_COMPILE_PDB = CMakeFiles\endgame.dir\
-  TARGET_PDB = endgame.pdb
 
 build CMakeFiles/endgame.dir/src/render/render_hero.c.obj: C_COMPILER__endgame_unscanned_Debug C$:/projects/endgame/src/render/render_hero.c || cmake_object_order_depends_target_endgame
   DEP_FILE = CMakeFiles\endgame.dir\src\render\render_hero.c.obj.d
@@ -208,8 +174,6 @@ build CMakeFiles/endgame.dir/src/render/render_hero.c.obj: C_COMPILER__endgame_u
   INCLUDES = -IC:/projects/endgame/resource -IC:/projects/endgame/src
   OBJECT_DIR = CMakeFiles\endgame.dir
   OBJECT_FILE_DIR = CMakeFiles\endgame.dir\src\render
-  TARGET_COMPILE_PDB = CMakeFiles\endgame.dir\
-  TARGET_PDB = endgame.pdb
 
 build CMakeFiles/endgame.dir/src/render/render_board.c.obj: C_COMPILER__endgame_unscanned_Debug C$:/projects/endgame/src/render/render_board.c || cmake_object_order_depends_target_endgame
   DEP_FILE = CMakeFiles\endgame.dir\src\render\render_board.c.obj.d
@@ -217,8 +181,6 @@ build CMakeFiles/endgame.dir/src/render/render_board.c.obj: C_COMPILER__endgame_
   INCLUDES = -IC:/projects/endgame/resource -IC:/projects/endgame/src
   OBJECT_DIR = CMakeFiles\endgame.dir
   OBJECT_FILE_DIR = CMakeFiles\endgame.dir\src\render
-  TARGET_COMPILE_PDB = CMakeFiles\endgame.dir\
-  TARGET_PDB = endgame.pdb
 
 build CMakeFiles/endgame.dir/src/render/render_main.c.obj: C_COMPILER__endgame_unscanned_Debug C$:/projects/endgame/src/render/render_main.c || cmake_object_order_depends_target_endgame
   DEP_FILE = CMakeFiles\endgame.dir\src\render\render_main.c.obj.d
@@ -226,8 +188,6 @@ build CMakeFiles/endgame.dir/src/render/render_main.c.obj: C_COMPILER__endgame_u
   INCLUDES = -IC:/projects/endgame/resource -IC:/projects/endgame/src
   OBJECT_DIR = CMakeFiles\endgame.dir
   OBJECT_FILE_DIR = CMakeFiles\endgame.dir\src\render
-  TARGET_COMPILE_PDB = CMakeFiles\endgame.dir\
-  TARGET_PDB = endgame.pdb
 
 build CMakeFiles/endgame.dir/src/render/render_bg.c.obj: C_COMPILER__endgame_unscanned_Debug C$:/projects/endgame/src/render/render_bg.c || cmake_object_order_depends_target_endgame
   DEP_FILE = CMakeFiles\endgame.dir\src\render\render_bg.c.obj.d
@@ -235,8 +195,6 @@ build CMakeFiles/endgame.dir/src/render/render_bg.c.obj: C_COMPILER__endgame_uns
   INCLUDES = -IC:/projects/endgame/resource -IC:/projects/endgame/src
   OBJECT_DIR = CMakeFiles\endgame.dir
   OBJECT_FILE_DIR = CMakeFiles\endgame.dir\src\render
-  TARGET_COMPILE_PDB = CMakeFiles\endgame.dir\
-  TARGET_PDB = endgame.pdb
 
 build CMakeFiles/endgame.dir/src/render/render_button.c.obj: C_COMPILER__endgame_unscanned_Debug C$:/projects/endgame/src/render/render_button.c || cmake_object_order_depends_target_endgame
   DEP_FILE = CMakeFiles\endgame.dir\src\render\render_button.c.obj.d
@@ -244,8 +202,6 @@ build CMakeFiles/endgame.dir/src/render/render_button.c.obj: C_COMPILER__endgame
   INCLUDES = -IC:/projects/endgame/resource -IC:/projects/endgame/src
   OBJECT_DIR = CMakeFiles\endgame.dir
   OBJECT_FILE_DIR = CMakeFiles\endgame.dir\src\render
-  TARGET_COMPILE_PDB = CMakeFiles\endgame.dir\
-  TARGET_PDB = endgame.pdb
 
 build CMakeFiles/endgame.dir/src/render/render_all_room.c.obj: C_COMPILER__endgame_unscanned_Debug C$:/projects/endgame/src/render/render_all_room.c || cmake_object_order_depends_target_endgame
   DEP_FILE = CMakeFiles\endgame.dir\src\render\render_all_room.c.obj.d
@@ -253,8 +209,6 @@ build CMakeFiles/endgame.dir/src/render/render_all_room.c.obj: C_COMPILER__endga
   INCLUDES = -IC:/projects/endgame/resource -IC:/projects/endgame/src
   OBJECT_DIR = CMakeFiles\endgame.dir
   OBJECT_FILE_DIR = CMakeFiles\endgame.dir\src\render
-  TARGET_COMPILE_PDB = CMakeFiles\endgame.dir\
-  TARGET_PDB = endgame.pdb
 
 build CMakeFiles/endgame.dir/src/render/render_obj.c.obj: C_COMPILER__endgame_unscanned_Debug C$:/projects/endgame/src/render/render_obj.c || cmake_object_order_depends_target_endgame
   DEP_FILE = CMakeFiles\endgame.dir\src\render\render_obj.c.obj.d
@@ -262,8 +216,6 @@ build CMakeFiles/endgame.dir/src/render/render_obj.c.obj: C_COMPILER__endgame_un
   INCLUDES = -IC:/projects/endgame/resource -IC:/projects/endgame/src
   OBJECT_DIR = CMakeFiles\endgame.dir
   OBJECT_FILE_DIR = CMakeFiles\endgame.dir\src\render
-  TARGET_COMPILE_PDB = CMakeFiles\endgame.dir\
-  TARGET_PDB = endgame.pdb
 
 build CMakeFiles/endgame.dir/src/entities/room_build.c.obj: C_COMPILER__endgame_unscanned_Debug C$:/projects/endgame/src/entities/room_build.c || cmake_object_order_depends_target_endgame
   DEP_FILE = CMakeFiles\endgame.dir\src\entities\room_build.c.obj.d
@@ -271,8 +223,6 @@ build CMakeFiles/endgame.dir/src/entities/room_build.c.obj: C_COMPILER__endgame_
   INCLUDES = -IC:/projects/endgame/resource -IC:/projects/endgame/src
   OBJECT_DIR = CMakeFiles\endgame.dir
   OBJECT_FILE_DIR = CMakeFiles\endgame.dir\src\entities
-  TARGET_COMPILE_PDB = CMakeFiles\endgame.dir\
-  TARGET_PDB = endgame.pdb
 
 build CMakeFiles/endgame.dir/src/entities/init_room.c.obj: C_COMPILER__endgame_unscanned_Debug C$:/projects/endgame/src/entities/init_room.c || cmake_object_order_depends_target_endgame
   DEP_FILE = CMakeFiles\endgame.dir\src\entities\init_room.c.obj.d
@@ -280,8 +230,6 @@ build CMakeFiles/endgame.dir/src/entities/init_room.c.obj: C_COMPILER__endgame_u
   INCLUDES = -IC:/projects/endgame/resource -IC:/projects/endgame/src
   OBJECT_DIR = CMakeFiles\endgame.dir
   OBJECT_FILE_DIR = CMakeFiles\endgame.dir\src\entities
-  TARGET_COMPILE_PDB = CMakeFiles\endgame.dir\
-  TARGET_PDB = endgame.pdb
 
 build CMakeFiles/endgame.dir/src/entities/board_build.c.obj: C_COMPILER__endgame_unscanned_Debug C$:/projects/endgame/src/entities/board_build.c || cmake_object_order_depends_target_endgame
   DEP_FILE = CMakeFiles\endgame.dir\src\entities\board_build.c.obj.d
@@ -289,8 +237,6 @@ build CMakeFiles/endgame.dir/src/entities/board_build.c.obj: C_COMPILER__endgame
   INCLUDES = -IC:/projects/endgame/resource -IC:/projects/endgame/src
   OBJECT_DIR = CMakeFiles\endgame.dir
   OBJECT_FILE_DIR = CMakeFiles\endgame.dir\src\entities
-  TARGET_COMPILE_PDB = CMakeFiles\endgame.dir\
-  TARGET_PDB = endgame.pdb
 
 build CMakeFiles/endgame.dir/src/entities/init_first_room.c.obj: C_COMPILER__endgame_unscanned_Debug C$:/projects/endgame/src/entities/init_first_room.c || cmake_object_order_depends_target_endgame
   DEP_FILE = CMakeFiles\endgame.dir\src\entities\init_first_room.c.obj.d
@@ -298,8 +244,6 @@ build CMakeFiles/endgame.dir/src/entities/init_first_room.c.obj: C_COMPILER__end
   INCLUDES = -IC:/projects/endgame/resource -IC:/projects/endgame/src
   OBJECT_DIR = CMakeFiles\endgame.dir
   OBJECT_FILE_DIR = CMakeFiles\endgame.dir\src\entities
-  TARGET_COMPILE_PDB = CMakeFiles\endgame.dir\
-  TARGET_PDB = endgame.pdb
 
 
 # =============================================================================
@@ -316,10 +260,9 @@ build endgame.exe: C_EXECUTABLE_LINKER__endgame_Debug CMakeFiles/endgame.dir/src
   OBJECT_DIR = CMakeFiles\endgame.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\endgame.dir\
   TARGET_FILE = endgame.exe
   TARGET_IMPLIB = libendgame.dll.a
-  TARGET_PDB = endgame.pdb
+  TARGET_PDB = endgame.exe.dbg
 
 
 #############################################
@@ -366,14 +309,14 @@ build all: phony endgame.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCCompilerABI.c C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCompilerIdDetection.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCompileFeatures.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineRCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeFindBinUtils.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeParseLibraryArchitecture.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystem.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeTestCompilerCommon.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeTestRCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Internal/FeatureTesting.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake C$:/projects/endgame/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeRCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake C$:/projects/endgame/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeRCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCCompilerABI.c C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCompilerIdDetection.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCompileFeatures.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineRCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeFindBinUtils.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeParseLibraryArchitecture.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystem.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeTestCompilerCommon.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeTestRCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Internal/FeatureTesting.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake C$:/projects/endgame/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeRCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake: phony
+build C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake C$:/projects/endgame/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeRCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake: phony
 
 
 #############################################
