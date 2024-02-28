@@ -36,6 +36,13 @@ typedef struct object {
     void (*onClick)(SDL_Renderer* render, SDL_Texture** texture, SDL_Rect* position);
 } Object;
 
+typedef struct door {
+    SDL_Rect position;
+    int height;
+    int width;
+    bool open;
+} Room;
+
 int WinMain(int argc, char* args[]);
 
 int menu();

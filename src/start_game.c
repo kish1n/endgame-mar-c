@@ -9,9 +9,11 @@ int start_game(SDL_Window* window, SDL_Renderer* render) {
     sdl_init();
     SDL_Rect hero = { SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, 140, 200};
 
-    SDL_Texture* bgTexture = load_texture("../resource/static/first_room/room-floor/first-room-floor.PNG", render);
+    SDL_Texture* bgTexture_1 = load_texture("../resource/static/first_room/room-floor/first-room-floor.PNG", render);
+    SDL_Texture* bgTexture_2 = load_texture("../resource/static/second_room/room-floor/second-room-floor.PNG", render);
 
-    if (!bgTexture) {
+
+    if (!bgTexture_1 && !bgTexture_2) {
         printf("err texture\n");
         exit(1);
     }
@@ -19,6 +21,7 @@ int start_game(SDL_Window* window, SDL_Renderer* render) {
     int speed = 1;
 
     //first room
+
     char* filenames1[] = {
             "../resource/static/first_room/non_active/clock.PNG",
             "../resource/static/first_room/non_active/cupboard.PNG",
@@ -87,13 +90,21 @@ int start_game(SDL_Window* window, SDL_Renderer* render) {
             open_book
     };
 
+    char* filenames2[] = {};
+    SDL_Rect positions2[] = {};
+    bool dummies2[] = {};
+    void (*funk2[])(SDL_Renderer*, SDL_Texture**, SDL_Rect*) = {};
+
     SDL_Texture* mainHeroTexture = IMG_LoadTexture(render, "../resource/static/mh.PNG");
 
     int len1 = sizeof(filenames1) / sizeof(filenames1[0]);
+    int len2 = sizeof(filenames1) / sizeof(filenames1[0]);
     printf("len: %d\n", len1);
 
-    Board room = room_build(1480, 600, bgTexture); // Создание комнаты
+    Board room_1 = room_build(1480, 600, bgTexture_2); // Создание комнаты
+
     Object* first_rom_obj = init_room(render, filenames1, positions1, dummies1, funk1, len1); // Инициализация объектов в комнате
+    Object* second_rom_obj = init_room(render, filenames2, positions2, dummies2, funk2, len2); // Инициализация объектов в комнате
 
     bool renderActiveObject = false;
     bool running = true;
@@ -134,9 +145,9 @@ int start_game(SDL_Window* window, SDL_Renderer* render) {
             }
         }
 
-        update_hero(&hero, speed, &room, &running, first_rom_obj, len1);
+        update_hero(&hero, speed, &room_1, &running, first_rom_obj, len1);
 
-        render_main(render, &hero, &room, first_rom_obj, mainHeroTexture, len1);
+        render_main(render, &hero, &room_1, first_rom_obj, mainHeroTexture, len1);
 
         if (renderActiveObject) {
             render_obj(render, active_obj);
@@ -150,7 +161,7 @@ int start_game(SDL_Window* window, SDL_Renderer* render) {
         SDL_DestroyTexture(first_rom_obj[i].bg);
     }
 
-    SDL_DestroyTexture(bgTexture);
+    SDL_DestroyTexture(bgTexture_1);
     SDL_DestroyRenderer(render);
     SDL_DestroyWindow(window);
     SDL_Quit();
