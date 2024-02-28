@@ -1,13 +1,8 @@
 #include "../../resource/header.h"
 
-void render_main(SDL_Renderer* renderer, SDL_Rect* hero, Board* room, Object* objects, SDL_Texture* mainHeroTexture, int len_objs) {
-    // Очистка экрана
-    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); // Черный фон
-    SDL_RenderClear(renderer);
-
+void render_main(SDL_Renderer* renderer, SDL_Rect* hero, Board* room, Object* act_obj, Object* objects, SDL_Texture* mainHeroTexture, int len_objs) {
     // Рендеринг комнаты
     if (room != NULL) {
-
         render_all_room(renderer, room, objects, len_objs);
     }
 
@@ -15,4 +10,9 @@ void render_main(SDL_Renderer* renderer, SDL_Rect* hero, Board* room, Object* ob
     if (hero != NULL) {
         render_hero(renderer, hero, mainHeroTexture);
     };
+
+    if(act_obj->bg != NULL) {
+        render_obj(renderer, *act_obj);
+    }
+
 }

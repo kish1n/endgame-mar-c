@@ -45,7 +45,7 @@ int menu() {
 
                     if (!inSettingsPage && !inAuthorsPage) {
                         if (handle_mouse_button_down(e, 100, 800, 210, 370, play_sound, clickButton)) {
-                            start_game(window, renderer);
+                            start_game(window, renderer, clickButton);
                         }
                         if (handle_mouse_button_down(e, 100, 800, 390, 550, play_sound, clickButton)) {
                             inSettingsPage = true;

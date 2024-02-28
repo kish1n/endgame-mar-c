@@ -6,5 +6,4 @@ void render_hero(SDL_Renderer* renderer, SDL_Rect* hero, SDL_Texture* heroTextur
         return;
     }
     SDL_RenderCopy(renderer, heroTexture, NULL, hero);
-    SDL_RenderPresent(renderer);
 }

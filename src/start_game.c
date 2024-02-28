@@ -4,7 +4,63 @@ void nuul_obj(SDL_Renderer* render, SDL_Texture** texture, SDL_Rect* position) {
     printf("function1\n");
 }
 
-int start_game(SDL_Window* window, SDL_Renderer* render) {
+void ingame_menu_esc_render(bool *isMenuOpen, bool *settingsOpened, Mix_Chunk *clickButton) {
+    if (!(*isMenuOpen)) {
+        play_sound(clickButton);
+        *isMenuOpen = true;
+    } else if (*isMenuOpen && *settingsOpened) {
+        play_sound(clickButton);
+        *settingsOpened = false;
+    } else if (*isMenuOpen) {
+        play_sound(clickButton);
+        *isMenuOpen = false;
+    }
+    if (*settingsOpened) {
+        *settingsOpened = false;
+    }
+}
+
+void ingame_main_menu_set(SDL_Event event, bool *isMenuOpen, bool *settingsOpened, Mix_Chunk *clickButton) {
+    if(handle_mouse_button_down(event, 680, 1280, 300, 450, play_sound, clickButton)) {
+        *isMenuOpen = false;
+    }
+    if(handle_mouse_button_down(event, 680, 1280, 500, 650, play_sound, clickButton)) {
+        *settingsOpened = true;
+    }
+    if(handle_mouse_button_down(event, 680, 1280, 700, 850, play_sound, clickButton)) {
+        SDL_Quit();
+        exit(0);
+    }
+}
+
+void ingame_voice_menu_set(SDL_Event event, bool *isMenuOpen, bool *settingsOpened, Mix_Chunk *clickButton) {
+    if (handle_mouse_button_down(event, 720, 920, 815, 890, play_sound, clickButton)) {
+        //volume на паузу
+    }
+    if (handle_mouse_button_down(event, 1020, 1220, 815, 890, play_sound, clickButton)) {
+        //volume на плей
+    }
+}
+
+void handle_mouse_click_for_objects(SDL_Renderer* render, SDL_Event e, Object* objects, int len_obj, SDL_Texture** active_texture, SDL_Rect* active_position, Object* active_obj, bool* renderActiveObject) {
+    int x, y;
+    SDL_GetMouseState(&x, &y);
+    for (int i = 0; i < len_obj; i++) {
+        if (x >= objects[i].position.x &&
+            x <= objects[i].position.x + objects[i].position.w &&
+            y >= objects[i].position.y &&
+            y <= objects[i].position.y + objects[i].position.h) {
+            if (objects[i].onClick != NULL) {
+                objects[i].onClick(render, active_texture, active_position);
+                *active_obj = (Object) {*active_texture, *active_position, 0, 0, true, NULL};
+                *renderActiveObject = true;
+            }
+        }
+    }
+}
+
+
+int start_game(SDL_Window* window, SDL_Renderer* render, Mix_Chunk* clickButton) {
 
     sdl_init();
     SDL_Rect hero = { SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, 140, 200};
@@ -12,6 +68,11 @@ int start_game(SDL_Window* window, SDL_Renderer* render) {
     SDL_Texture* bgTexture_1 = load_texture("../resource/static/first_room/room-floor/first-room-floor.PNG", render);
     SDL_Texture* bgTexture_2 = load_texture("../resource/static/second_room/room-floor/second-room-floor.PNG", render);
 
+    SDL_Texture* menuInGameBackground;
+    SDL_Texture* backgroundsettings;
+    SDL_Texture* settingsButtonTextures[7];
+    SDL_Texture* menuButtonTexture[3];
+    init_texture_menuInGane(render, &backgroundsettings, &menuInGameBackground, menuButtonTexture, settingsButtonTextures);
 
     if (!bgTexture_1 && !bgTexture_2) {
         printf("err texture\n");
@@ -101,60 +162,68 @@ int start_game(SDL_Window* window, SDL_Renderer* render) {
     int len2 = sizeof(filenames1) / sizeof(filenames1[0]);
     printf("len: %d\n", len1);
 
-    Board room_1 = room_build(1480, 600, bgTexture_2); // Создание комнаты
+    Board room = room_build(1480, 600, bgTexture_2); // Создание комнаты
 
     Object* first_rom_obj = init_room(render, filenames1, positions1, dummies1, funk1, len1); // Инициализация объектов в комнате
-    Object* second_rom_obj = init_room(render, filenames2, positions2, dummies2, funk2, len2); // Инициализация объектов в комнате
+//    Object* second_rom_obj = init_room(render, filenames2, positions2, dummies2, funk2, len2); // Инициализация объектов в комнате
 
     bool renderActiveObject = false;
-    bool running = true;
+
     SDL_Texture* active_texture = NULL;
     SDL_Rect active_position;
     Object active_obj = {0};
 
-    while (running) {
-        SDL_Event e;
+    bool isMenuOpen = false;
+    bool settingsOpened = false;
+    bool isRunning = true;
 
-        if (e.type == SDL_QUIT) {
-            running = false;
-        }
 
-        while (SDL_PollEvent(&e)) {
-
-             if (e.key.keysym.sym == SDLK_ESCAPE) {
-                if (renderActiveObject) {
-                    renderActiveObject = false;
-                    if (active_texture != NULL) {
-                        SDL_DestroyTexture(active_texture);
-                        active_texture = NULL;
-                    }
-                }
-            } else if (e.type == SDL_MOUSEBUTTONDOWN) {
-                int x, y;
-                SDL_GetMouseState(&x, &y);
-                for (int i = 0; i < len1; i++) {
-                    if (x >= first_rom_obj[i].position.x && x <= first_rom_obj[i].position.x + first_rom_obj[i].position.w &&
-                        y >= first_rom_obj[i].position.y && y <= first_rom_obj[i].position.y + first_rom_obj[i].position.h) {
-                        if (first_rom_obj[i].onClick != NULL) {
-                            first_rom_obj[i].onClick(render, &active_texture, &active_position);
-                            active_obj = (Object) {active_texture, active_position, 0, 0, true, NULL};
-                            renderActiveObject = true;
+    while (isRunning) {
+        SDL_Event event;
+        while (SDL_PollEvent(&event)) {
+            if (event.type == SDL_KEYDOWN) {
+                if (event.key.keysym.sym == SDLK_ESCAPE) {
+                    ingame_menu_esc_render(&isMenuOpen, &settingsOpened, clickButton);
+                } else if (event.key.keysym.sym == SDLK_SPACE) {
+                    if (renderActiveObject) {
+                        renderActiveObject = false;
+                        if (active_texture != NULL) {
+                            SDL_DestroyTexture(active_texture);
+                            active_texture = NULL;
                         }
                     }
+                }
+            } else if (event.type == SDL_MOUSEBUTTONDOWN) {
+                if (isMenuOpen && !settingsOpened) {
+                    ingame_main_menu_set(event, &isMenuOpen, &settingsOpened, clickButton);
+                } else if (settingsOpened) {
+                    ingame_voice_menu_set(event, &isMenuOpen, &settingsOpened, clickButton);
+                } else {
+                    handle_mouse_click_for_objects(render, event, first_rom_obj, len1, &active_texture,
+                                                   &active_position, &active_obj, &renderActiveObject);
                 }
             }
         }
 
-        update_hero(&hero, speed, &room_1, &running, first_rom_obj, len1);
+        //render
+        if (isMenuOpen) {
+            if (settingsOpened) {
+                win_build_Settings(render, window, settingsButtonTextures, backgroundsettings);
+            } else {
+                SDL_RenderCopy(render, menuInGameBackground, NULL, NULL);
+                win_buildMenuButtons(render, menuButtonTexture);
+            }
+        }
+        else {
 
-        render_main(render, &hero, &room_1, first_rom_obj, mainHeroTexture, len1);
+            render_main(render, &hero, &room, &active_obj, first_rom_obj, mainHeroTexture, len1);
 
-        if (renderActiveObject) {
-            render_obj(render, active_obj);
+            update_hero(&hero, speed, &room, &isRunning, first_rom_obj, len1);
+
+            SDL_RenderPresent(render);
         }
 
-        SDL_RenderPresent(render);
-        SDL_Delay(3);
+        SDL_Delay(1);
     }
 
     for (int i = 0; i < len1; i++) {
