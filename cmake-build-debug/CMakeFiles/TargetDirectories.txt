@@ -1,3 +1,0 @@
-C:/projects/endgame/cmake-build-debug/CMakeFiles/endgame.dir
-C:/projects/endgame/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/projects/endgame/cmake-build-debug/CMakeFiles/rebuild_cache.dir

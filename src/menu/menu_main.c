@@ -9,12 +9,13 @@ int menu() {
     SDL_Texture* authorsBackgroundTexture;
     SDL_Texture* buttonTextures[4];
     SDL_Texture* settingsButtonTextures[7];
+    Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048);
 
     init_texture_menu(renderer, backgroundTexture, &authorsBackgroundTexture, buttonTextures, settingsButtonTextures);
 
     Mix_Chunk* clickButton = load_sound("../menu/volume/clickbutton.wav");
     Mix_Chunk* backgroundVolume = load_sound("../menu/volume/backgroundVolume.wav");
-    play_sound(backgroundVolume);
+    //play_sound(backgroundVolume);
 
     SDL_Event e;
 
@@ -39,7 +40,7 @@ int menu() {
 
                     if (!inSettingsPage && !inAuthorsPage) {
                         if (handle_mouse_button_down(e, 100, 800, 210, 370, play_sound, clickButton)) {
-                            start_game(window, renderer);
+                            start_game(window, renderer, clickButton);
                         }
                         if (handle_mouse_button_down(e, 100, 800, 390, 550, play_sound, clickButton)) {
                             inSettingsPage = true;
