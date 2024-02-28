@@ -1,10 +1,10 @@
 #include "../../resource/header.h"
 
-Object* init_room(SDL_Renderer* renderer, char** filenames, SDL_Rect* positions, bool** dummies) {
+Object* init_room(SDL_Renderer* renderer, char** filenames, SDL_Rect* positions, bool* dummies, void (*onClickFunctions[])(SDL_Renderer* render, SDL_Texture** texture, SDL_Rect* position), int length) {
 
-    Object* objects = malloc(sizeof(Object) * 11);
+    Object* objects = malloc(sizeof(Object) * length);
 
-    for (int i = 0; i < 11; i++) {
+    for (int i = 0; i < length; i++) {
         objects[i].bg = malloc(strlen(filenames[i]) + 1);
         objects[i].bg = load_texture(filenames[i], renderer);
         objects[i].position = positions[i];
@@ -19,7 +19,7 @@ Object* init_room(SDL_Renderer* renderer, char** filenames, SDL_Rect* positions,
             objects[i].height = 0;
             objects[i].width = 0;
         }
-        printf("w: %d, h: %d\n", width, height);
+        objects[i].onClick = onClickFunctions[i];
     }
 
     return objects;

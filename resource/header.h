@@ -9,6 +9,7 @@
 #define SCREEN_WIDTH 1920
 #define SCREEN_HEIGHT 1080
 
+
 typedef struct Coordinates {
     int x;
     int y;
@@ -32,26 +33,35 @@ typedef struct object {
     int height; // высота фото
     int width;  // ширина фото
     bool dummy;
+    void (*onClick)(SDL_Renderer* render, SDL_Texture** texture, SDL_Rect* position);
 } Object;
+
+typedef struct door {
+    SDL_Rect position;
+    int height;
+    int width;
+    bool open;
+} Room;
 
 int WinMain(int argc, char* args[]);
 
 int menu();
 
-int start_game(SDL_Window* window, SDL_Renderer* renderer);
+int start_game(SDL_Window* window, SDL_Renderer* render);
 
-//
-//
-////errs
+//errs
 void sdl_init();
 SDL_Window* sdl_window();
 SDL_Renderer* sdl_render(SDL_Window* window);
 
 //entities
-Object* init_room(SDL_Renderer* renderer, char** filenames, SDL_Rect* positions, bool** dummies);
-void render_all_room(SDL_Renderer* renderer, const Board* room, Object* objects, int len_objs);
-void render_obj(SDL_Renderer* renderer, Object obj);
+Object* init_room(SDL_Renderer* renderer, char** filenames, SDL_Rect* positions, bool* dummies,
+                  void (*onClickFunctions[])(SDL_Renderer* render, SDL_Texture** texture, SDL_Rect* position1), int length);
 Board room_build(int roomWidth, int roomHeight, SDL_Texture* bgPath);
+Board board_build(Object obj);
+
+//entities-first-room
+void open_book(SDL_Renderer* render, SDL_Texture** texture, SDL_Rect* position);
 
 //mechanics
 void update_hero(SDL_Rect* hero, int speed, Board* room, bool* running, Object* objects, int len_objs);
@@ -60,15 +70,18 @@ bool check_collision(const SDL_Rect* a, const SDL_Rect* b);
 //render
 Board render_board(SDL_Renderer* renderer, const Board* room);
 void render_hero(SDL_Renderer* renderer, SDL_Rect* hero, SDL_Texture* texture);
-void render_main(SDL_Renderer* renderer, SDL_Rect* hero, Board* board, Object* objects, int len_objs);
+void render_main(SDL_Renderer* renderer, SDL_Rect* hero, Board* room, Object* objects, SDL_Texture* mainHeroTexture, int len_objs);
+void render_all_room(SDL_Renderer* renderer, const Board* room, Object* objects, int len_objs);
+void render_obj(SDL_Renderer* renderer, Object obj);
 
-////graphics
+//graphics
 SDL_Texture* load_texture(const char* filename, SDL_Renderer* renderer);
 void render_bg(SDL_Renderer* renderer, SDL_Texture* texture);
 void render_button(SDL_Renderer* renderer, SDL_Texture* buttonTexture, int x, int y, int w, int h);
 
 //menu
-void init_texture_menu(SDL_Renderer* renderer, SDL_Texture* backgroundTexture[], SDL_Texture** authorsBackgroundTexture, SDL_Texture* buttonTextures[], SDL_Texture* settingsButtonTextures[]);
+void init_texture_menu(SDL_Renderer* renderer, SDL_Texture* backgroundTexture[], SDL_Texture** authorsBackgroundTexture,
+                       SDL_Texture* buttonTextures[], SDL_Texture* settingsButtonTextures[]);
 Mix_Chunk* load_sound(const char* path);
 void play_sound(Mix_Chunk* sound);
 

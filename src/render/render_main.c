@@ -1,7 +1,6 @@
 #include "../../resource/header.h"
 
-void render_main(SDL_Renderer* renderer, SDL_Rect* hero, Board* room, Object* objects, int len_objs) {
-    SDL_Texture* mainHeroTexture = IMG_LoadTexture(renderer, "../resource/static/mh.PNG");
+void render_main(SDL_Renderer* renderer, SDL_Rect* hero, Board* room, Object* objects, SDL_Texture* mainHeroTexture, int len_objs) {
     // Очистка экрана
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); // Черный фон
     SDL_RenderClear(renderer);
@@ -15,7 +14,5 @@ void render_main(SDL_Renderer* renderer, SDL_Rect* hero, Board* room, Object* ob
     // Рендеринг героя
     if (hero != NULL) {
         render_hero(renderer, hero, mainHeroTexture);
-    }
-
-    SDL_RenderPresent(renderer);
+    };
 }

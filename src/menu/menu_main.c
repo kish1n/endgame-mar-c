@@ -1,20 +1,26 @@
 #include "../../resource/header.h"
 
+
 int menu() {
     sdl_init();
     SDL_Window* window = sdl_window();
     SDL_Renderer* renderer = sdl_render(window);
 
+
+
     SDL_Texture* backgroundTexture[4];
     SDL_Texture* authorsBackgroundTexture;
     SDL_Texture* buttonTextures[4];
     SDL_Texture* settingsButtonTextures[7];
+    Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048);
+
 
     init_texture_menu(renderer, backgroundTexture, &authorsBackgroundTexture, buttonTextures, settingsButtonTextures);
 
+
     Mix_Chunk* clickButton = load_sound("../menu/volume/clickbutton.wav");
     Mix_Chunk* backgroundVolume = load_sound("../menu/volume/backgroundVolume.wav");
-    play_sound(backgroundVolume);
+    //play_sound(backgroundVolume);
 
     SDL_Event e;
 

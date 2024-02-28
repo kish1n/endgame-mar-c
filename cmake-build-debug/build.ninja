@@ -238,12 +238,12 @@ build CMakeFiles/endgame.dir/src/entities/board_build.c.obj: C_COMPILER__endgame
   OBJECT_DIR = CMakeFiles\endgame.dir
   OBJECT_FILE_DIR = CMakeFiles\endgame.dir\src\entities
 
-build CMakeFiles/endgame.dir/src/entities/init_first_room.c.obj: C_COMPILER__endgame_unscanned_Debug C$:/projects/endgame/src/entities/init_first_room.c || cmake_object_order_depends_target_endgame
-  DEP_FILE = CMakeFiles\endgame.dir\src\entities\init_first_room.c.obj.d
+build CMakeFiles/endgame.dir/src/entities/objects/first_room/open_book.c.obj: C_COMPILER__endgame_unscanned_Debug C$:/projects/endgame/src/entities/objects/first_room/open_book.c || cmake_object_order_depends_target_endgame
+  DEP_FILE = CMakeFiles\endgame.dir\src\entities\objects\first_room\open_book.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   INCLUDES = -IC:/projects/endgame/resource -IC:/projects/endgame/src
   OBJECT_DIR = CMakeFiles\endgame.dir
-  OBJECT_FILE_DIR = CMakeFiles\endgame.dir\src\entities
+  OBJECT_FILE_DIR = CMakeFiles\endgame.dir\src\entities\objects\first_room
 
 
 # =============================================================================
@@ -253,7 +253,7 @@ build CMakeFiles/endgame.dir/src/entities/init_first_room.c.obj: C_COMPILER__end
 #############################################
 # Link the executable endgame.exe
 
-build endgame.exe: C_EXECUTABLE_LINKER__endgame_Debug CMakeFiles/endgame.dir/src/main.c.obj CMakeFiles/endgame.dir/src/start_game.c.obj CMakeFiles/endgame.dir/src/errs/sdl_init.c.obj CMakeFiles/endgame.dir/src/errs/sdl_window.c.obj CMakeFiles/endgame.dir/src/errs/sdl_render.c.obj CMakeFiles/endgame.dir/src/graphics/load_texture.c.obj CMakeFiles/endgame.dir/src/graphics/load_sound.c.obj CMakeFiles/endgame.dir/src/graphics/play_sound.c.obj CMakeFiles/endgame.dir/src/mechanics/update_hero.c.obj CMakeFiles/endgame.dir/src/mechanics/check_collision.c.obj CMakeFiles/endgame.dir/src/menu/handle_mouse_button_down.c.obj CMakeFiles/endgame.dir/src/menu/init_texture_menu.c.obj CMakeFiles/endgame.dir/src/menu/menu_main.c.obj CMakeFiles/endgame.dir/src/menu/play_click_sound.c.obj CMakeFiles/endgame.dir/src/menu/win_buildFHD.c.obj CMakeFiles/endgame.dir/src/menu/win_buildHD.c.obj CMakeFiles/endgame.dir/src/menu/win_buildNHD.c.obj CMakeFiles/endgame.dir/src/render/render_hero.c.obj CMakeFiles/endgame.dir/src/render/render_board.c.obj CMakeFiles/endgame.dir/src/render/render_main.c.obj CMakeFiles/endgame.dir/src/render/render_bg.c.obj CMakeFiles/endgame.dir/src/render/render_button.c.obj CMakeFiles/endgame.dir/src/render/render_all_room.c.obj CMakeFiles/endgame.dir/src/render/render_obj.c.obj CMakeFiles/endgame.dir/src/entities/room_build.c.obj CMakeFiles/endgame.dir/src/entities/init_room.c.obj CMakeFiles/endgame.dir/src/entities/board_build.c.obj CMakeFiles/endgame.dir/src/entities/init_first_room.c.obj
+build endgame.exe: C_EXECUTABLE_LINKER__endgame_Debug CMakeFiles/endgame.dir/src/main.c.obj CMakeFiles/endgame.dir/src/start_game.c.obj CMakeFiles/endgame.dir/src/errs/sdl_init.c.obj CMakeFiles/endgame.dir/src/errs/sdl_window.c.obj CMakeFiles/endgame.dir/src/errs/sdl_render.c.obj CMakeFiles/endgame.dir/src/graphics/load_texture.c.obj CMakeFiles/endgame.dir/src/graphics/load_sound.c.obj CMakeFiles/endgame.dir/src/graphics/play_sound.c.obj CMakeFiles/endgame.dir/src/mechanics/update_hero.c.obj CMakeFiles/endgame.dir/src/mechanics/check_collision.c.obj CMakeFiles/endgame.dir/src/menu/handle_mouse_button_down.c.obj CMakeFiles/endgame.dir/src/menu/init_texture_menu.c.obj CMakeFiles/endgame.dir/src/menu/menu_main.c.obj CMakeFiles/endgame.dir/src/menu/play_click_sound.c.obj CMakeFiles/endgame.dir/src/menu/win_buildFHD.c.obj CMakeFiles/endgame.dir/src/menu/win_buildHD.c.obj CMakeFiles/endgame.dir/src/menu/win_buildNHD.c.obj CMakeFiles/endgame.dir/src/render/render_hero.c.obj CMakeFiles/endgame.dir/src/render/render_board.c.obj CMakeFiles/endgame.dir/src/render/render_main.c.obj CMakeFiles/endgame.dir/src/render/render_bg.c.obj CMakeFiles/endgame.dir/src/render/render_button.c.obj CMakeFiles/endgame.dir/src/render/render_all_room.c.obj CMakeFiles/endgame.dir/src/render/render_obj.c.obj CMakeFiles/endgame.dir/src/entities/room_build.c.obj CMakeFiles/endgame.dir/src/entities/init_room.c.obj CMakeFiles/endgame.dir/src/entities/board_build.c.obj CMakeFiles/endgame.dir/src/entities/objects/first_room/open_book.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lSDL2  -lSDL2_ttf  -lSDL2_mixer  -lSDL2_image  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   LINK_PATH = -LC:/projects/endgame/resource/SDL2-2.30.0/lib/x64   -LC:/projects/endgame/resource/SDL2_image-2.8.2/lib/x64   -LC:/projects/endgame/resource/SDL2_mixer-2.8.0/lib/x64   -LC:/projects/endgame/resource/SDL2_ttf-2.22.0/lib/x64
