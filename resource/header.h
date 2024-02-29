@@ -66,7 +66,7 @@ Door door_create(SDL_Rect position, int height, int width, bool open, int toRoom
 void open_book(SDL_Renderer* render, SDL_Texture** texture, SDL_Rect* position);
 
 //mechanics
-int update_hero(SDL_Rect* hero, int speed, Board* room, bool* running, Object* objects, int len_objs, Door* doors, int len_doors);
+int update_hero(SDL_Rect* hero, int speed, Board* room, bool* running, Object* objects, int len_objs, Door* doors, int len_doors, int *index_room);
 bool check_collision(const SDL_Rect* a, const SDL_Rect* b);
 void main_event_handler(SDL_Event *event, SDL_Renderer* render, Object** first_rom_obj, int *len1, Mix_Chunk** clickButton, bool* isMenuOpen, bool* settingsOpened, bool* renderActiveObject, SDL_Texture** active_texture, SDL_Rect* active_position, Object* active_obj);
 int game_cutscene(SDL_Renderer* render, bool cutsceneActive);
@@ -100,5 +100,12 @@ void ingame_menu_esc_render(bool *isMenuOpen, bool *settingsOpened, Mix_Chunk *c
 void ingame_main_menu_set(SDL_Event event, bool *isMenuOpen, bool *settingsOpened, Mix_Chunk *clickButton);
 void ingame_voice_menu_set(SDL_Event event, bool *isMenuOpen, bool *settingsOpened, Mix_Chunk *clickButton);
 
+
+void init_arr4room_0( char*** filenames, SDL_Rect** positions, bool** dummies,
+                      void (***functions)(SDL_Renderer*, SDL_Texture**, SDL_Rect*), Door** doors);
 void init_arr4room_1( char*** filenames, SDL_Rect** positions, bool** dummies,
                   void (***functions)(SDL_Renderer*, SDL_Texture**, SDL_Rect*), Door** doors);
+void init_arr4room_2( char*** filenames, SDL_Rect** positions, bool** dummies,
+                      void (***functions)(SDL_Renderer*, SDL_Texture**, SDL_Rect*), Door** doors);
+void init_arr4room_3( char*** filenames, SDL_Rect** positions, bool** dummies,
+                      void (***functions)(SDL_Renderer*, SDL_Texture**, SDL_Rect*), Door** doors);

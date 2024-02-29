@@ -62,6 +62,9 @@ add_executable(endgame
         src/entities/door_create.c
         src/render/render_door.c
         src/render/render_room.c
+        src/entities/init_arr4room_2.c
+        src/entities/init_arr4room_3.c
+        src/entities/init_arr4room_0.c
 )
 
 
