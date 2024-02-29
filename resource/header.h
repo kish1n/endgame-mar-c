@@ -27,6 +27,29 @@ typedef struct board {
     SDL_Texture* bg;
 } Board;
 
+typedef struct board3 {
+    SDL_Rect topWall;
+    SDL_Rect bottomWall;
+    SDL_Rect leftWall;
+    SDL_Rect rightWall;
+    SDL_Texture* bg;
+    SDL_Rect wall1;
+    SDL_Rect wall2;
+    SDL_Rect wall3;
+    SDL_Rect wall4;
+    SDL_Rect wall5;
+    SDL_Rect wall6;
+    SDL_Rect wall7;
+    SDL_Rect wall8;
+    SDL_Rect wall9;
+    SDL_Rect wall10;
+    SDL_Rect wall11;
+    SDL_Rect wall12;
+    SDL_Rect wall13;
+    SDL_Rect wall14;
+} Board3;
+
+
 typedef struct object {
     SDL_Texture* bg;
     SDL_Rect position;
@@ -42,6 +65,8 @@ typedef struct door {
     int width;
     bool open;
     int toRoom;
+    int x_coord;
+    int y_coord;
 } Door;
 
 int WinMain(int argc, char* args[]);
@@ -73,7 +98,7 @@ int game_cutscene(SDL_Renderer* render, bool cutsceneActive);
 
 //render
 void render_hero(SDL_Renderer* renderer, SDL_Rect* hero, SDL_Texture* texture);
-void render_main(SDL_Renderer* renderer, SDL_Rect* hero, Board* room, Object* act_obj, Object* objects, SDL_Texture* mainHeroTexture, int len_objs, Door* doors, int len_doors);
+void render_main(SDL_Renderer* renderer, SDL_Rect* hero, Board* room, Object* act_obj, Object* objects, SDL_Texture* mainHeroTexture, int len_objs);
 void render_all_room(SDL_Renderer* renderer, const Board* room, Object* objects, int len_objs);
 void render_obj(SDL_Renderer* renderer, Object obj);
 void render_door(SDL_Renderer* render, const Door* door);

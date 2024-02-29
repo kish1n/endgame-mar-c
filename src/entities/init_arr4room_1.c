@@ -72,7 +72,7 @@ void init_arr4room_1( char*** filenames, SDL_Rect** positions, bool** dummies,
     };
 
     static Door local_doors[] = {
-            (SDL_Rect){1685, 610, 30, 170}, 200, 30, true, 2,
+            (SDL_Rect){1685, 610, 30, 170}, 200, 30, true, 2, 200, 610
     };
 
     *filenames = local_filenames;

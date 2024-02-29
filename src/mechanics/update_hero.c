@@ -26,7 +26,6 @@ int update_hero(SDL_Rect* hero, int speed, Board* room, bool* running, Object* o
 
     SDL_Rect newHeroRect = {newX, newY, hero->w, hero->h};
 
-    // Проверка столкновений с стенами комнаты
     if (!check_collision(&newHeroRect, &room->topWall) &&
         !check_collision(&newHeroRect, &room->bottomWall) &&
         !check_collision(&newHeroRect, &room->leftWall) &&
@@ -39,7 +38,14 @@ int update_hero(SDL_Rect* hero, int speed, Board* room, bool* running, Object* o
                     collisionWithObjects = false;
                     continue;
                 }
-                collisionWithObjects = true;
+                collisionWithObjects = true;// Modify hero's position if index_room is 3
+                if (*index_room == 3) {
+                    hero->x = 1330;
+                    hero->y = 900;
+                    hero->w = 60;
+                    hero->h = 100;
+                    break; // Break out of the loop after setting position
+                }
                 break;
             }
         }
@@ -47,7 +53,7 @@ int update_hero(SDL_Rect* hero, int speed, Board* room, bool* running, Object* o
         for (int i = 0; i < len_doors; i++) {
             if (check_collision(&newHeroRect, &doors[i].position)) {
                 if( 0 < doors[i].toRoom && doors[i].toRoom < 4)
-                    return doors[i].toRoom;
+                    *index_room =  doors[i].toRoom;
             }
         }
 

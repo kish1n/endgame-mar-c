@@ -4,54 +4,25 @@ void init_arr4room_3( char*** filenames, SDL_Rect** positions, bool** dummies,
                       void (***functions)(SDL_Renderer*, SDL_Texture**, SDL_Rect*), Door** doors) {
 
     static char* local_filenames[] = {
-            "../resource/static/first_room/non_active/clock.PNG",
-            "../resource/static/first_room/non_active/cupboard.PNG",
-            "../resource/static/first_room/non_active/cupboard_books.PNG",
-            "../resource/static/first_room/non_active/fireplace.PNG",
-            "../resource/static/first_room/non_active/greenandblue_mushroom.PNG",
-            "../resource/static/first_room/non_active/picture.PNG",
-            "../resource/static/first_room/non_active/pudge.PNG",
-            "../resource/static/first_room/non_active/red_mushroom.PNG",
-            "../resource/static/first_room/non_active/tumbler.PNG",
-            "../resource/static/first_room/non_active/win.PNG",
-            "../resource/static/first_room/non_active/yellow_mushroom.PNG",
-            "../resource/static/first_room/non_active/mushroom_light.PNG",
-            "../resource/static/first_room/non_active/moon_light.PNG",
-            "../resource/static/first_room/active/list.PNG"
+        "../resource/static/door.png",
+        "../resource/static/door.png",
+        "../resource/static/door.png",
+        "../resource/static/door.png",
+        "../resource/static/door.png",
     };
 
     static SDL_Rect local_positions[] = {
-            { 270, 110, 140, 140},
-            { 230, 550, 240, 360},
-            { 450, 140, 300, 400},
-            { 1210, 260, 500, 250 },
-            { 270, 260, 105, 305 },
-            { 1290, 55, 360, 200 },
-            { 720, 350, 140, 140},
-            { 1465, 780, 230, 230 },
-            { 550, 840, 170, 170 },
-            { 800, 60, 421, 300},
-            { 270, 840, 170, 170 },
-            {1,1,1920,1080},
-            {1,1,1920,1080},
-            { 300, 660, 90, 90},
+        {790,415,260,90},
+        {550,500,500,210},
+        {230,905,1050,110},
+        {1280,505,260,380},
     };
 
     static bool local_dummies[] = {
-            true,
             false,
-            true,
-            true,
-            true,
             false,
-            true,
-            true,
             false,
-            true,
-            true,
-            true,
-            true,
-            true
+            false,
     };
 
     static void (*local_functions[])(SDL_Renderer*, SDL_Texture**, SDL_Rect*) = {
@@ -59,20 +30,10 @@ void init_arr4room_3( char*** filenames, SDL_Rect** positions, bool** dummies,
             nuul_obj,
             nuul_obj,
             nuul_obj,
-            nuul_obj,
-            nuul_obj,
-            nuul_obj,
-            nuul_obj,
-            nuul_obj,
-            nuul_obj,
-            nuul_obj,
-            nuul_obj,
-            nuul_obj,
-            open_book
     };
 
     static Door local_doors[] = {
-            (SDL_Rect){1685, 610, 30, 170}, 200, 30, true, 2,
+            (SDL_Rect){1430, 1005, 200, 30}, 30, 200, true, 2,
     };
 
     *filenames = local_filenames;

@@ -40,7 +40,6 @@ int start_game(SDL_Window* window, SDL_Renderer* render, Mix_Chunk* clickButton)
     int len_doors1 = 1;
 
     init_arr4room_1(&filenames1, &positions1, &dummies1, &funk1, &doors1);
-    SDL_Rect hero = { SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, 140, 200};
 
     //second room
     char** filenames2;
@@ -48,10 +47,11 @@ int start_game(SDL_Window* window, SDL_Renderer* render, Mix_Chunk* clickButton)
     bool* dummies2;
     void (**funk2)(SDL_Renderer*, SDL_Texture**, SDL_Rect*);
     Door* doors2;
-    int len2 = 5;
-    int len_doors2 = 1;
+    int len2 = 6;
+    int len_doors2 = 2;
 
     init_arr4room_2(&filenames2, &positions2, &dummies2, &funk2, &doors2);
+
 
     //fourth room
     char** filenames3;
@@ -59,7 +59,7 @@ int start_game(SDL_Window* window, SDL_Renderer* render, Mix_Chunk* clickButton)
     bool* dummies3;
     void (**funk3)(SDL_Renderer*, SDL_Texture**, SDL_Rect*);
     Door* doors3;
-    int len3 = 14;
+    int len3 = 4;
     int len_doors3 = 1;
 
     init_arr4room_3(&filenames3, &positions3, &dummies3, &funk3, &doors3);
@@ -71,7 +71,9 @@ int start_game(SDL_Window* window, SDL_Renderer* render, Mix_Chunk* clickButton)
         rooms[3] = init_room(render, filenames3, positions3, dummies3, funk3, len3); // Инициализация объектов в комнате 3
 
     int lens[4] = {len0, len1, len2, len3};
+
     int len_doors[4] = {len_doors0, len_doors1, len_doors2, len_doors3};
+
     Door* doors[4] = {doors0, doors1, doors2, doors3};
 
     bool renderActiveObject = false;
@@ -87,48 +89,46 @@ int start_game(SDL_Window* window, SDL_Renderer* render, Mix_Chunk* clickButton)
     bool cutsceneActive = true;
 
     while (SDL_GetTicks() - startTime < 10000 && cutsceneActive, game_cutscene(render, cutsceneActive) == 0) {}
-    Door* now_door = doors1;
 
     int index_room = 1;
+    int cur_index = 1;
 
+    SDL_Rect hero = { SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, 140, 200};
     while (isRunning) {
         SDL_Event event;
-        printf("%d\n", index_room);
-
+        cur_index = index_room;
         SDL_Texture *now_bg = active_bg[index_room];
-        printf("1n");
         Board room = room_build(1480, 600, now_bg);
-        printf("1n");
         Object* now_obj = rooms[index_room];
-        printf("1n");
+        int len_objs = lens[index_room];
 
         while (SDL_PollEvent(&event)) {
             main_event_handler(&event, render, &now_obj, &len1, &clickButton, &isMenuOpen, &settingsOpened,
                                &renderActiveObject, &active_texture, &active_position, &active_obj);
-            printf("1n");
         }
 
         if (isMenuOpen) {
             if (settingsOpened) {
                 win_build_Settings(render, window, settingsButtonTextures, backgroundsettings);
-                printf("1n");
             } else {
                 SDL_RenderCopy(render, menuInGameBackground, NULL, NULL);
                 win_buildMenuButtons(render, menuButtonTexture);
-                printf("1n");
             }
         }
         else {
-            render_main(render, &hero, &room, &active_obj, now_obj, mainHeroTexture, lens[index_room], doors[index_room], len_doors1);
-            printf("1n");
-            index_room = update_hero(&hero, speed, &room, &isRunning, now_obj, lens[index_room], doors[index_room], len_doors1, &index_room);
-            printf("1n");
-            SDL_RenderPresent(render);
-            printf("1n");
+            index_room = update_hero(&hero, speed, &room, &isRunning, now_obj, lens[index_room], doors[index_room], len_doors[index_room], &index_room);
+            render_main(render, &hero, &room, &active_obj, now_obj, mainHeroTexture, len_objs);
         }
-        SDL_Delay(1);
-        printf("1n");
+        if (cur_index != index_room) {
+            if (index_room == 3) {
+                hero =  (SDL_Rect) { 1330, 900, 60, 100};
+            } else {
+                hero = (SDL_Rect) {SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, 140, 200};
+            }
+        }
 
+        SDL_Delay(1);
+        SDL_RenderPresent(render);
     }
 
     for(int i = 0; i < 4; i++) {
