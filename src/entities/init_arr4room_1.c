@@ -1,7 +1,7 @@
 #include "../../resource/header.h"
 
 void init_arr4room_1( char*** filenames, SDL_Rect** positions, bool** dummies,
-      void (***functions)(SDL_Renderer*, SDL_Texture**, SDL_Rect*), Door** doors) {
+      void (***functions)(SDL_Renderer*, SDL_Texture**, SDL_Rect*, SDL_Texture** this_texture), Door** doors) {
 
     static char* local_filenames[] = {
             "../resource/static/first_room/non_active/clock.PNG",
@@ -24,7 +24,7 @@ void init_arr4room_1( char*** filenames, SDL_Rect** positions, bool** dummies,
             { 270, 110, 140, 140},
             { 230, 550, 240, 360},
             { 450, 140, 300, 400},
-            { 1210, 260, 500, 250 },
+            { 1210, 260, 470, 350 },
             { 270, 260, 105, 305 },
             { 1290, 55, 360, 200 },
             { 720, 350, 140, 140},
@@ -54,11 +54,11 @@ void init_arr4room_1( char*** filenames, SDL_Rect** positions, bool** dummies,
             true
     };
 
-    static void (*local_functions[])(SDL_Renderer*, SDL_Texture**, SDL_Rect*) = {
+    static void (*local_functions[])(SDL_Renderer*, SDL_Texture**, SDL_Rect*, SDL_Texture** this_texture) = {
             nuul_obj,
             nuul_obj,
-            nuul_obj,
-            nuul_obj,
+            book_note,
+            camin_on,
             nuul_obj,
             nuul_obj,
             nuul_obj,
@@ -72,7 +72,7 @@ void init_arr4room_1( char*** filenames, SDL_Rect** positions, bool** dummies,
     };
 
     static Door local_doors[] = {
-            (SDL_Rect){1685, 610, 30, 170}, 200, 30, true, 2, 200, 610
+            (SDL_Rect){1210, 300, 200, 30}, 30, 200, true, 2, 200, 610
     };
 
     *filenames = local_filenames;

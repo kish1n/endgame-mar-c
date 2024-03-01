@@ -1,6 +1,6 @@
 #include "../../resource/header.h"
 
-Object* init_room(SDL_Renderer* renderer, char** filenames, SDL_Rect* positions, bool* dummies, void (*onClickFunctions[])(SDL_Renderer* render, SDL_Texture** texture, SDL_Rect* position), int length) {
+Object* init_room(SDL_Renderer* renderer, char** filenames, SDL_Rect* positions, bool* dummies, void (*onClickFunctions[])(SDL_Renderer* render, SDL_Texture** texture, SDL_Rect* position, SDL_Texture** this_texture), int length) {
     Object* objects = malloc(sizeof(Object) * length);
 
     for (int i = 0; i < length; i++) {

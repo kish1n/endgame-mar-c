@@ -9,7 +9,7 @@ void handle_mouse_click_for_objects(SDL_Renderer* render, SDL_Event e, Object* o
             y >= objects[i].position.y &&
             y <= objects[i].position.y + objects[i].position.h) {
             if (objects[i].onClick != NULL) {
-                objects[i].onClick(render, active_texture, active_position);
+                objects[i].onClick(render, active_texture, active_position, &objects[i].bg);
                 *active_obj = (Object) {*active_texture, *active_position, 0, 0, true, NULL};
                 *renderActiveObject = true;
             }

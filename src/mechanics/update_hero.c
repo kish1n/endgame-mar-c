@@ -52,7 +52,7 @@ int update_hero(SDL_Rect* hero, int speed, Board* room, bool* running, Object* o
 
         for (int i = 0; i < len_doors; i++) {
             if (check_collision(&newHeroRect, &doors[i].position)) {
-                if( 0 < doors[i].toRoom && doors[i].toRoom < 4)
+                if( 0 < doors[i].toRoom && doors[i].toRoom < 5)
                     *index_room =  doors[i].toRoom;
             }
         }
@@ -62,7 +62,7 @@ int update_hero(SDL_Rect* hero, int speed, Board* room, bool* running, Object* o
             hero->y = newY;
         }
     }
-    if( 0 < *index_room && *index_room < 4)
+    if( 0 < *index_room && *index_room < 5)
         return *index_room;
     else
         printf("Error: index_room is out of range %n\n", index_room);

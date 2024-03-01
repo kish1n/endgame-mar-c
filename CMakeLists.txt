@@ -65,6 +65,17 @@ add_executable(endgame
         src/entities/init_arr4room_2.c
         src/entities/init_arr4room_3.c
         src/entities/init_arr4room_0.c
+        src/graphics/game_cutscene2.c
+        src/graphics/render_cutscene.c
+        src/errs/sdl_ttf.c
+        src/graphics/game_cutscene1.c
+        src/entities/objects/first_room/picture_note.c
+        src/entities/objects/first_room/camin_on.c
+        src/entities/objects/second_room/piano_note.c
+        src/entities/objects/second_room/gazeta_op.c
+        src/entities/objects/second_room/under_piano.c
+        src/entities/objects/second_room/open_cupboard.c
+        src/entities/objects/second_room/chair_chek.c
 )
 
 

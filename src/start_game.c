@@ -2,6 +2,8 @@
 
 int start_game(SDL_Window* window, SDL_Renderer* render, Mix_Chunk* clickButton) {
     sdl_init();
+    sdl_ttf();
+
 
     SDL_Texture* active_bg[4];
         active_bg[0] = load_texture("../resource/static/second_room/room-floor/second-room-floor.PNG", render);
@@ -23,10 +25,10 @@ int start_game(SDL_Window* window, SDL_Renderer* render, Mix_Chunk* clickButton)
     char** filenames0;
     SDL_Rect* positions0;
     bool* dummies0;
-    void (**funk0)(SDL_Renderer*, SDL_Texture**, SDL_Rect*);
+    void (**funk0)(SDL_Renderer*, SDL_Texture**, SDL_Rect*, SDL_Texture** this_texture);
     Door* doors0;
-    int len0 = 14;
-    int len_doors0 = 1;
+    int len0 = 0;
+    int len_doors0 = 0;
 
     init_arr4room_0(&filenames0, &positions0, &dummies0, &funk0, &doors0);
 
@@ -35,7 +37,7 @@ int start_game(SDL_Window* window, SDL_Renderer* render, Mix_Chunk* clickButton)
     SDL_Rect* positions1;
     bool* dummies1;
     Door* doors1;
-    void (**funk1)(SDL_Renderer*, SDL_Texture**, SDL_Rect*);
+    void (**funk1)(SDL_Renderer*, SDL_Texture**, SDL_Rect*, SDL_Texture** this_texture);
     int len1 = 14;
     int len_doors1 = 1;
 
@@ -45,9 +47,9 @@ int start_game(SDL_Window* window, SDL_Renderer* render, Mix_Chunk* clickButton)
     char** filenames2;
     SDL_Rect* positions2;
     bool* dummies2;
-    void (**funk2)(SDL_Renderer*, SDL_Texture**, SDL_Rect*);
+    void (**funk2)(SDL_Renderer*, SDL_Texture**, SDL_Rect*, SDL_Texture** this_texture);
     Door* doors2;
-    int len2 = 6;
+    int len2 = 9;
     int len_doors2 = 2;
 
     init_arr4room_2(&filenames2, &positions2, &dummies2, &funk2, &doors2);
@@ -57,10 +59,10 @@ int start_game(SDL_Window* window, SDL_Renderer* render, Mix_Chunk* clickButton)
     char** filenames3;
     SDL_Rect* positions3;
     bool* dummies3;
-    void (**funk3)(SDL_Renderer*, SDL_Texture**, SDL_Rect*);
+    void (**funk3)(SDL_Renderer*, SDL_Texture**, SDL_Rect*, SDL_Texture** this_texturea);
     Door* doors3;
     int len3 = 4;
-    int len_doors3 = 1;
+    int len_doors3 = 2;
 
     init_arr4room_3(&filenames3, &positions3, &dummies3, &funk3, &doors3);
 
@@ -88,12 +90,14 @@ int start_game(SDL_Window* window, SDL_Renderer* render, Mix_Chunk* clickButton)
     Uint32 startTime = SDL_GetTicks();
     bool cutsceneActive = true;
 
-    while (SDL_GetTicks() - startTime < 10000 && cutsceneActive, game_cutscene(render, cutsceneActive) == 0) {}
 
     int index_room = 1;
     int cur_index = 1;
 
     SDL_Rect hero = { SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, 140, 200};
+
+    game_cutscene1(render, window);
+
     while (isRunning) {
         SDL_Event event;
         cur_index = index_room;
@@ -119,10 +123,15 @@ int start_game(SDL_Window* window, SDL_Renderer* render, Mix_Chunk* clickButton)
             index_room = update_hero(&hero, speed, &room, &isRunning, now_obj, lens[index_room], doors[index_room], len_doors[index_room], &index_room);
             render_main(render, &hero, &room, &active_obj, now_obj, mainHeroTexture, len_objs);
         }
+        if (index_room == 4) {
+            printf("Game over\n");
+            isRunning = false;
+        }
+
         if (cur_index != index_room) {
             if (index_room == 3) {
                 hero =  (SDL_Rect) { 1330, 900, 60, 100};
-            } else {
+            } else if (index_room != 4) {
                 hero = (SDL_Rect) {SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, 140, 200};
             }
         }
@@ -131,7 +140,9 @@ int start_game(SDL_Window* window, SDL_Renderer* render, Mix_Chunk* clickButton)
         SDL_RenderPresent(render);
     }
 
-    for(int i = 0; i < 4; i++) {
+    game_cutscene2(render, window);
+
+    for (int i = 0; i < 4; i++) {
         SDL_DestroyTexture(active_bg[i]);
     }
 

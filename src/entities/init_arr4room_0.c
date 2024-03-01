@@ -1,7 +1,7 @@
 #include "../../resource/header.h"
 
 void init_arr4room_0( char*** filenames, SDL_Rect** positions, bool** dummies,
-                      void (***functions)(SDL_Renderer*, SDL_Texture**, SDL_Rect*), Door** doors) {
+                      void (***functions)(SDL_Renderer*, SDL_Texture**, SDL_Rect*, SDL_Texture** this_texture), Door** doors) {
 
     static char* local_filenames[] = {
             "../resource/static/first_room/non_active/clock.PNG",
@@ -54,7 +54,7 @@ void init_arr4room_0( char*** filenames, SDL_Rect** positions, bool** dummies,
             true
     };
 
-    static void (*local_functions[])(SDL_Renderer*, SDL_Texture**, SDL_Rect*) = {
+    static void (*local_functions[])(SDL_Renderer*, SDL_Texture**, SDL_Rect*, SDL_Texture** this_texture) = {
             nuul_obj,
             nuul_obj,
             nuul_obj,

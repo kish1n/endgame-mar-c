@@ -27,36 +27,13 @@ typedef struct board {
     SDL_Texture* bg;
 } Board;
 
-typedef struct board3 {
-    SDL_Rect topWall;
-    SDL_Rect bottomWall;
-    SDL_Rect leftWall;
-    SDL_Rect rightWall;
-    SDL_Texture* bg;
-    SDL_Rect wall1;
-    SDL_Rect wall2;
-    SDL_Rect wall3;
-    SDL_Rect wall4;
-    SDL_Rect wall5;
-    SDL_Rect wall6;
-    SDL_Rect wall7;
-    SDL_Rect wall8;
-    SDL_Rect wall9;
-    SDL_Rect wall10;
-    SDL_Rect wall11;
-    SDL_Rect wall12;
-    SDL_Rect wall13;
-    SDL_Rect wall14;
-} Board3;
-
-
 typedef struct object {
     SDL_Texture* bg;
     SDL_Rect position;
     int height; // высота фото
     int width;  // ширина фото
     bool dummy;
-    void (*onClick)(SDL_Renderer* render, SDL_Texture** texture, SDL_Rect* position);
+    void (*onClick)(SDL_Renderer* render, SDL_Texture** texture, SDL_Rect* position, SDL_Texture** this_texture);
 } Object;
 
 typedef struct door {
@@ -79,16 +56,28 @@ int start_game(SDL_Window* window, SDL_Renderer* render, Mix_Chunk* clickButton)
 void sdl_init();
 SDL_Window* sdl_window();
 SDL_Renderer* sdl_render(SDL_Window* window);
+void sdl_ttf();
 
 //entities
-Object* init_room(SDL_Renderer* renderer, char** filenames, SDL_Rect* positions, bool* dummies, void (*onClickFunctions[])(SDL_Renderer* render, SDL_Texture** texture, SDL_Rect* position), int length);
+Object* init_room(SDL_Renderer* renderer, char** filenames, SDL_Rect* positions, bool* dummies, void (*onClickFunctions[])(SDL_Renderer* render, SDL_Texture** texture, SDL_Rect* position, SDL_Texture** this_texture), int length);
 Board room_build(int roomWidth, int roomHeight, SDL_Texture* bgPath);
 Board board_build(Object obj);
-void nuul_obj(SDL_Renderer* render, SDL_Texture** texture, SDL_Rect* position);
+void nuul_obj(SDL_Renderer* render, SDL_Texture** texture, SDL_Rect* position, SDL_Texture** this_texture);
 void handle_mouse_click_for_objects(SDL_Renderer* render, SDL_Event e, Object* objects, int len_obj, SDL_Texture** active_texture, SDL_Rect* active_position, Object* active_obj, bool* renderActiveObject);
 Door door_create(SDL_Rect position, int height, int width, bool open, int toRoom);
+
+
 //entities-first-room
-void open_book(SDL_Renderer* render, SDL_Texture** texture, SDL_Rect* position);
+void open_book(SDL_Renderer* render, SDL_Texture** texture, SDL_Rect* position, SDL_Texture** this_texture);
+void book_note(SDL_Renderer* render, SDL_Texture** texture, SDL_Rect* position, SDL_Texture** this_texture);
+void camin_on(SDL_Renderer* render, SDL_Texture** texture, SDL_Rect* position, SDL_Texture** this_texture);
+
+//entities-second-room
+void piano_note(SDL_Renderer* render, SDL_Texture** texture, SDL_Rect* position, SDL_Texture** this_texture);
+void gazeta_op(SDL_Renderer* render, SDL_Texture** texture, SDL_Rect* position, SDL_Texture** this_texture);
+void under_piano(SDL_Renderer* render, SDL_Texture** texture, SDL_Rect* position, SDL_Texture** this_texture);
+void open_cupboard(SDL_Renderer* render, SDL_Texture** texture, SDL_Rect* position, SDL_Texture** this_texture);
+void chair_chek(SDL_Renderer* render, SDL_Texture** texture, SDL_Rect* position, SDL_Texture** this_texture);
 
 //mechanics
 int update_hero(SDL_Rect* hero, int speed, Board* room, bool* running, Object* objects, int len_objs, Door* doors, int len_doors, int *index_room);
@@ -107,6 +96,9 @@ void render_door(SDL_Renderer* render, const Door* door);
 SDL_Texture* load_texture(const char* filename, SDL_Renderer* renderer);
 void render_bg(SDL_Renderer* renderer, SDL_Texture* texture);
 void render_button(SDL_Renderer* renderer, SDL_Texture* buttonTexture, int x, int y, int w, int h);
+void game_cutscene1(SDL_Renderer* renderer, SDL_Window* window);
+void game_cutscene2(SDL_Renderer* renderer, SDL_Window* window);
+void render_cutscene(SDL_Renderer* renderer, const char* text, SDL_Window* window, int delay);
 
 //menu
 void init_texture_menu(SDL_Renderer* renderer, SDL_Texture* backgroundTexture[], SDL_Texture** authorsBackgroundTexture,
@@ -127,10 +119,10 @@ void ingame_voice_menu_set(SDL_Event event, bool *isMenuOpen, bool *settingsOpen
 
 
 void init_arr4room_0( char*** filenames, SDL_Rect** positions, bool** dummies,
-                      void (***functions)(SDL_Renderer*, SDL_Texture**, SDL_Rect*), Door** doors);
+                      void (***functions)(SDL_Renderer*, SDL_Texture**, SDL_Rect*, SDL_Texture** this_texture), Door** doors);
 void init_arr4room_1( char*** filenames, SDL_Rect** positions, bool** dummies,
-                  void (***functions)(SDL_Renderer*, SDL_Texture**, SDL_Rect*), Door** doors);
+                  void (***functions)(SDL_Renderer*, SDL_Texture**, SDL_Rect*, SDL_Texture** this_texture), Door** doors);
 void init_arr4room_2( char*** filenames, SDL_Rect** positions, bool** dummies,
-                      void (***functions)(SDL_Renderer*, SDL_Texture**, SDL_Rect*), Door** doors);
+                      void (***functions)(SDL_Renderer*, SDL_Texture**, SDL_Rect*, SDL_Texture** this_texture), Door** doors);
 void init_arr4room_3( char*** filenames, SDL_Rect** positions, bool** dummies,
-                      void (***functions)(SDL_Renderer*, SDL_Texture**, SDL_Rect*), Door** doors);
+                      void (***functions)(SDL_Renderer*, SDL_Texture**, SDL_Rect*, SDL_Texture** this_texture), Door** doors);
